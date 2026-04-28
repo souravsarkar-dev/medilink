@@ -343,7 +343,7 @@ MediLink 2.0 demonstrates how **Google's AI technology** can bridge the healthca
 
 | | |
 |--|--|
-| **Developer** | Sourav Sarkar |
+| **Developer** | Sourav Sarkar |Aditya Das | Ashish Sarkar 
 | **GitHub** | [@souravsarkar-dev](https://github.com/souravsarkar-dev) |
 | **Project** | MediLink 2.0 |
 | **Hackathon** | Google Hackathon 2026 |
