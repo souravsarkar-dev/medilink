@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head><title>MediLink Debug Test</title></head>
+<body style="font-family:sans-serif;padding:20px;max-width:800px;margin:0 auto">
+<h1>🔧 MediLink Debug Test Page</h1>
+<p>This page tests all API connections independently. Open browser console (F12) to see details.</p>
+<hr>
+
+<h2>Test 1: Gemini Symptom Checker API</h2>
+<button id="testSymptom" style="padding:12px 24px;background:#2563eb;color:white;border:none;border-radius:8px;font-size:16px;cursor:pointer">
+  🧪 Test Symptom Checker
+</button>
+<div id="symptomResult" style="margin-top:12px;padding:12px;border:1px solid #ddd;border-radius:8px;display:none"></div>
+
+<h2>Test 2: Gemini AsliDawa Vision API (text-only)</h2>
+<button id="testAsliDawa" style="padding:12px 24px;background:#7c3aed;color:white;border:none;border-radius:8px;font-size:16px;cursor:pointer">
+  🧪 Test AsliDawa API
+</button>
+<div id="asliDawaResult" style="margin-top:12px;padding:12px;border:1px solid #ddd;border-radius:8px;display:none"></div>
+
+<h2>Test 3: Camera Access</h2>
+<button id="testCamera" style="padding:12px 24px;background:#16a34a;color:white;border:none;border-radius:8px;font-size:16px;cursor:pointer">
+  🧪 Test Camera
+</button>
+<video id="testVideo" autoplay playsinline muted style="display:none;width:320px;height:240px;border-radius:8px;margin-top:12px"></video>
+<div id="cameraResult" style="margin-top:12px;padding:12px;border:1px solid #ddd;border-radius:8px;display:none"></div>
+
+<h2>Test 4: app-backend.js Module Load</h2>
+<button id="testBackend" style="padding:12px 24px;background:#ea580c;color:white;border:none;border-radius:8px;font-size:16px;cursor:pointer">
+  🧪 Test Backend Functions
+</button>
+<div id="backendResult" style="margin-top:12px;padding:12px;border:1px solid #ddd;border-radius:8px;display:none"></div>
+
+<script>
+const GEMINI_API_KEY = 'AIzaSyBhJAWtw1UIPB0fE9tgATQdb73wetKldSA';
+const GEMINI_MODEL = 'gemini-2.5-flash';
+const GEMINI_URL = `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent?key=${GEMINI_API_KEY}`;
+
+function show(id, html, color) {
+  const el = document.getElementById(id);
+  el.style.display = 'block';
+  el.style.borderColor = color;
+  el.innerHTML = html;
+}
+
+// TEST 1: Symptom Checker
+document.getElementById('testSymptom').onclick = async function() {
+  this.textContent = '⏳ Calling Gemini API...';
+  this.disabled = true;
+  try {
+    const body = {
+      contents: [{ role: 'user', parts: [{ text: `You are a medical triage assistant for rural India. Respond ONLY with this JSON (no markdown, no backticks, no extra text): {"urgency":"LOW","urgencyColor":"green","urgencyReason":"reason","possibleConditions":["c1","c2"],"recommendation":"rec","recommendationHindi":"hindi","homeRemedies":["r1"],"warningSigns":["w1"],"shouldSeeDoctor":false,"timeframe":"when","disclaimer":"AI only"}\n\nPatient reports: Fever, Headache. Duration: 1-2 days. Severity: Moderate.` }] }],
+      generationConfig: { temperature: 0.2, maxOutputTokens: 1024 }
+    };
+    const res = await fetch(GEMINI_URL, { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(body) });
+    console.log('Symptom API status:', res.status);
+    if (!res.ok) { const e = await res.text(); throw new Error(`API ${res.status}: ${e}`); }
+    const data = await res.json();
+    const text = data.candidates?.[0]?.content?.parts?.[0]?.text || '';
+    console.log('Symptom raw:', text);
+    const jsonMatch = text.match(/\{[\s\S]*\}/);
+    if (!jsonMatch) throw new Error('No JSON in response');
+    const result = JSON.parse(jsonMatch[0]);
+    show('symptomResult', `<b style="color:green">✅ SUCCESS!</b><br>Urgency: ${result.urgency}<br>Conditions: ${result.possibleConditions?.join(', ')}<br>Recommendation: ${result.recommendation}`, 'green');
+  } catch(e) {
+    console.error('Symptom test error:', e);
+    show('symptomResult', `<b style="color:red">❌ FAILED:</b> ${e.message}`, 'red');
+  }
+  this.textContent = '🧪 Test Symptom Checker';
+  this.disabled = false;
+};
+
+// TEST 2: AsliDawa
+document.getElementById('testAsliDawa').onclick = async function() {
+  this.textContent = '⏳ Calling Gemini API...';
+  this.disabled = true;
+  try {
+    const body = {
+      contents: [{ role: 'user', parts: [{ text: `You are a pharmaceutical expert. Barcode: 8904131401010 = Authentic Paracetamol by Cipla. Respond ONLY with JSON: {"verdict":"AUTHENTIC","confidence":85,"medicineName":"Paracetamol","genericName":"Acetaminophen","manufacturer":"Cipla","batchFormat":"Batch A123","regNo":"CDSCO-123","positiveIndicators":["clear print"],"suspiciousIndicators":[],"recommendation":"Safe to consume","analysisNote":"note"}` }] }],
+      generationConfig: { temperature: 0.2, maxOutputTokens: 1024 }
+    };
+    const res = await fetch(GEMINI_URL, { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(body) });
+    console.log('AsliDawa API status:', res.status);
+    if (!res.ok) { const e = await res.text(); throw new Error(`API ${res.status}: ${e}`); }
+    const data = await res.json();
+    const text = data.candidates?.[0]?.content?.parts?.[0]?.text || '';
+    console.log('AsliDawa raw:', text);
+    const jsonMatch = text.match(/\{[\s\S]*\}/);
+    if (!jsonMatch) throw new Error('No JSON in response');
+    const result = JSON.parse(jsonMatch[0]);
+    show('asliDawaResult', `<b style="color:green">✅ SUCCESS!</b><br>Verdict: ${result.verdict}<br>Medicine: ${result.medicineName}<br>Confidence: ${result.confidence}%<br>Manufacturer: ${result.manufacturer}`, 'green');
+  } catch(e) {
+    console.error('AsliDawa test error:', e);
+    show('asliDawaResult', `<b style="color:red">❌ FAILED:</b> ${e.message}`, 'red');
+  }
+  this.textContent = '🧪 Test AsliDawa API';
+  this.disabled = false;
+};
+
+// TEST 3: Camera
+document.getElementById('testCamera').onclick = async function() {
+  this.textContent = '⏳ Requesting camera...';
+  try {
+    const stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: 'environment' } });
+    const video = document.getElementById('testVideo');
+    video.srcObject = stream;
+    video.style.display = 'block';
+    show('cameraResult', '<b style="color:green">✅ Camera access granted! Video stream active.</b>', 'green');
+    setTimeout(() => { stream.getTracks().forEach(t => t.stop()); video.style.display='none'; }, 10000);
+  } catch(e) {
+    console.error('Camera test error:', e);
+    show('cameraResult', `<b style="color:red">❌ Camera FAILED:</b> ${e.message}<br><br>This is expected if: (1) No camera on this device, (2) Not using HTTPS, or (3) Permission denied.`, 'red');
+  }
+  this.textContent = '🧪 Test Camera';
+};
+
+// TEST 4: Backend module check
+document.getElementById('testBackend').onclick = function() {
+  const fns = ['analyzeSymptoms','openCamera','capturePhoto','analyzeMedicine','retakePhoto','stopCamera','initClinicFinder','searchClinics','startDemoScan','showToast','renderVerificationResult','renderSymptomResult','setDuration','setSeverity'];
+  let html = '<b>Backend Function Status:</b><br><br>';
+  let allOk = true;
+  fns.forEach(name => {
+    const exists = typeof window[name] === 'function';
+    if (!exists) allOk = false;
+    html += `${exists ? '✅' : '❌'} window.${name} = ${typeof window[name]}<br>`;
+  });
+  html += `<br><b style="color:${allOk ? 'green' : 'red'}">${allOk ? '✅ ALL functions loaded!' : '❌ Some functions MISSING - app-backend.js may have failed to load'}</b>`;
+  show('backendResult', html, allOk ? 'green' : 'red');
+};
+</script>
+
+<!-- Load the actual app-backend module to check if it registers functions -->
+<script type="module" src="js/app-backend.js"></script>
+</body>
+</html>
