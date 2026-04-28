@@ -1,0 +1,314 @@
+/* ============================================================
+   MEDILINK 2.0 — ANIMATIONS
+   ============================================================ */
+
+/* ── Fade Animations ────────────────────────────────────────── */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-24px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(24px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+
+/* ── Scale Animations ───────────────────────────────────────── */
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.85); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes scaleInBounce {
+  0%   { opacity: 0; transform: scale(0.5); }
+  70%  { transform: scale(1.08); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes popIn {
+  0%   { transform: scale(0.9); opacity: 0; }
+  60%  { transform: scale(1.04); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* ── Toast ──────────────────────────────────────────────────── */
+@keyframes toastIn {
+  from { opacity: 0; transform: translateX(100px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes toastOut {
+  from { opacity: 1; transform: translateX(0); }
+  to   { opacity: 0; transform: translateX(100px); }
+}
+
+/* ── Pulse Animations ───────────────────────────────────────── */
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.5; }
+}
+
+@keyframes pulseSoft {
+  0%, 100% { transform: scale(1); }
+  50%       { transform: scale(1.03); }
+}
+
+@keyframes pulseGlow {
+  0%   { box-shadow: 0 0 0 0 var(--primary-glow); }
+  70%  { box-shadow: 0 0 0 18px rgba(0,200,150,0); }
+  100% { box-shadow: 0 0 0 0 rgba(0,200,150,0); }
+}
+
+@keyframes pulseGlowDanger {
+  0%   { box-shadow: 0 0 0 0 rgba(230,57,70,0.4); }
+  70%  { box-shadow: 0 0 0 24px rgba(230,57,70,0); }
+  100% { box-shadow: 0 0 0 0 rgba(230,57,70,0); }
+}
+
+@keyframes pulseGlowGreen {
+  0%   { box-shadow: 0 0 0 0 rgba(46,204,113,0.4); }
+  70%  { box-shadow: 0 0 0 20px rgba(46,204,113,0); }
+  100% { box-shadow: 0 0 0 0 rgba(46,204,113,0); }
+}
+
+/* ── Scanner ────────────────────────────────────────────────── */
+@keyframes scanLine {
+  0%   { top: 10%; }
+  50%  { top: 85%; }
+  100% { top: 10%; }
+}
+
+@keyframes scanRing {
+  0%   { stroke-dashoffset: 280; opacity: 0.3; }
+  50%  { opacity: 1; }
+  100% { stroke-dashoffset: 0; opacity: 1; }
+}
+
+@keyframes scanBorder {
+  0%   { border-color: var(--primary); box-shadow: 0 0 0 0 var(--primary-glow); }
+  50%  { border-color: var(--primary-light); box-shadow: 0 0 30px var(--primary-glow); }
+  100% { border-color: var(--primary); box-shadow: 0 0 0 0 var(--primary-glow); }
+}
+
+@keyframes scanSuccess {
+  0%   { border-color: var(--success); box-shadow: 0 0 0 0 var(--success-glow); }
+  50%  { box-shadow: 0 0 40px rgba(46,204,113,0.4); }
+  100% { border-color: var(--success); box-shadow: 0 0 20px var(--success-glow); }
+}
+
+@keyframes scanDanger {
+  0%   { border-color: var(--danger); box-shadow: 0 0 0 0 var(--danger-glow); }
+  50%  { box-shadow: 0 0 40px rgba(230,57,70,0.5); }
+  100% { border-color: var(--danger); box-shadow: 0 0 20px var(--danger-glow); }
+}
+
+/* ── Rotate ─────────────────────────────────────────────────── */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes spinReverse {
+  from { transform: rotate(360deg); }
+  to   { transform: rotate(0deg); }
+}
+
+@keyframes orbit {
+  from { transform: rotate(0deg) translateX(60px) rotate(0deg); }
+  to   { transform: rotate(360deg) translateX(60px) rotate(-360deg); }
+}
+
+/* ── Float ──────────────────────────────────────────────────── */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%        { transform: translateY(-12px); }
+}
+
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33%       { transform: translateY(-8px) rotate(1deg); }
+  66%       { transform: translateY(-4px) rotate(-1deg); }
+}
+
+/* ── Shimmer / Skeleton ─────────────────────────────────────── */
+@keyframes shimmer {
+  from { background-position: -200% center; }
+  to   { background-position: 200% center; }
+}
+
+.skeleton {
+  background: linear-gradient(90deg,
+    var(--bg-elevated) 25%,
+    var(--bg-card-hover) 50%,
+    var(--bg-elevated) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: var(--r-md);
+}
+
+/* ── Text Stream ────────────────────────────────────────────── */
+@keyframes textStream {
+  from { width: 0; }
+  to   { width: 100%; }
+}
+
+@keyframes cursorBlink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+@keyframes typeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Score Ring ─────────────────────────────────────────────── */
+@keyframes ringFill {
+  from { stroke-dashoffset: var(--ring-total); }
+  to   { stroke-dashoffset: var(--ring-offset); }
+}
+
+@keyframes ringGlow {
+  0%, 100% { filter: drop-shadow(0 0 6px rgba(0,200,150,0.4)); }
+  50%       { filter: drop-shadow(0 0 14px rgba(0,200,150,0.8)); }
+}
+
+/* ── SOS ────────────────────────────────────────────────────── */
+@keyframes sosAlert {
+  0%   { background: #1A0005; }
+  50%  { background: rgba(230,57,70,0.15); }
+  100% { background: #1A0005; }
+}
+
+@keyframes sosRipple {
+  0%   { transform: scale(1);   opacity: 1; }
+  100% { transform: scale(2.5); opacity: 0; }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 50%, 90% { transform: translateX(-4px); }
+  30%, 70% { transform: translateX(4px); }
+}
+
+/* ── Map Marker ─────────────────────────────────────────────── */
+@keyframes markerDrop {
+  from { transform: translateY(-20px) scale(0.8); opacity: 0; }
+  to   { transform: translateY(0) scale(1); opacity: 1; }
+}
+
+@keyframes markerPulse {
+  0%, 100% { transform: scale(1); }
+  50%       { transform: scale(1.2); }
+}
+
+/* ── Slide ──────────────────────────────────────────────────── */
+@keyframes slideUp {
+  from { transform: translateY(100%); }
+  to   { transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(0); }
+  to   { transform: translateY(100%); }
+}
+
+@keyframes slideLeft {
+  from { transform: translateX(100%); opacity: 0; }
+  to   { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideRight {
+  from { transform: translateX(-100%); opacity: 0; }
+  to   { transform: translateX(0); opacity: 1; }
+}
+
+/* ── Counter ────────────────────────────────────────────────── */
+@keyframes countUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to   { transform: translateY(0); opacity: 1; }
+}
+
+/* ── Badge Unlock ───────────────────────────────────────────── */
+@keyframes badgeUnlock {
+  0%   { transform: scale(0) rotate(-20deg); opacity: 0; }
+  60%  { transform: scale(1.15) rotate(5deg); }
+  80%  { transform: scale(0.95) rotate(-2deg); }
+  100% { transform: scale(1) rotate(0deg); opacity: 1; }
+}
+
+/* ── Gradient Shift ─────────────────────────────────────────── */
+@keyframes gradientShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes gradientPan {
+  0%   { background-position: 0% 0%; }
+  100% { background-position: 200% 200%; }
+}
+
+/* ── Orb Float ──────────────────────────────────────────────── */
+@keyframes orbFloat {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33%       { transform: translate(30px, -20px) scale(1.05); }
+  66%       { transform: translate(-20px, 10px) scale(0.95); }
+}
+
+/* ── Breathing ──────────────────────────────────────────────── */
+@keyframes breathe {
+  0%, 100% { transform: scale(1); opacity: 0.8; }
+  50%       { transform: scale(1.06); opacity: 1; }
+}
+
+/* ── Notification Dot ───────────────────────────────────────── */
+@keyframes notifPop {
+  0%   { transform: scale(0); }
+  60%  { transform: scale(1.3); }
+  100% { transform: scale(1); }
+}
+
+/* ── Utility Classes for Animation ─────────────────────────── */
+.animate-fade-in     { animation: fadeIn var(--ease-base) forwards; }
+.animate-fade-in-up  { animation: fadeInUp 0.4s var(--ease-spring) forwards; }
+.animate-fade-in-down { animation: fadeInDown 0.4s var(--ease-spring) forwards; }
+.animate-scale-in    { animation: scaleIn 0.3s var(--ease-spring) forwards; }
+.animate-spin        { animation: spin 1s linear infinite; }
+.animate-pulse       { animation: pulse 2s ease infinite; }
+.animate-pulse-glow  { animation: pulseGlow 2s ease infinite; }
+.animate-float       { animation: float 4s ease-in-out infinite; }
+.animate-breathe     { animation: breathe 3s ease-in-out infinite; }
+.animate-shake       { animation: shake 0.5s ease; }
+.animate-slide-up    { animation: slideUp 0.4s var(--ease-spring) forwards; }
+
+/* Stagger delays for lists */
+.stagger-1 { animation-delay: 0.05s; }
+.stagger-2 { animation-delay: 0.10s; }
+.stagger-3 { animation-delay: 0.15s; }
+.stagger-4 { animation-delay: 0.20s; }
+.stagger-5 { animation-delay: 0.25s; }
+.stagger-6 { animation-delay: 0.30s; }
+.stagger-7 { animation-delay: 0.35s; }
+.stagger-8 { animation-delay: 0.40s; }
