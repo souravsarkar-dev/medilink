@@ -1,0 +1,1610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>MediLink 2.0 — India's AI Healthcare Guardian | Google Solution Challenge 2026</title>
+<meta name="description" content="80 crore Indians lack reliable healthcare. MediLink 2.0 is India's first end-to-end AI healthcare companion — symptom checker, fake medicine detector, clinic finder, and emergency SOS. Built for rural India, works on 2G."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+/* ============================================================
+   MEDILINK 2.0 — WORLD-CLASS LANDING PAGE
+   Google Solution Challenge 2026
+   ============================================================ */
+
+:root {
+  --blue:      #1A73E8;
+  --blue-dk:   #1557B0;
+  --blue-lt:   #E8F0FE;
+  --teal:      #00C896;
+  --teal-dk:   #009E78;
+  --teal-lt:   #E6FAF5;
+  --green:     #34A853;
+  --red:       #EA4335;
+  --yellow:    #FBBC04;
+  --dark:      #202124;
+  --mid:       #3C4043;
+  --grey:      #5F6368;
+  --lt-grey:   #9AA0A6;
+  --border:    #E8EAED;
+  --bg:        #FFFFFF;
+  --bg-soft:   #F8F9FA;
+  --bg-blue:   #F0F7FF;
+  --bg-teal:   #F0FBF7;
+  --shadow-sm: 0 1px 6px rgba(0,0,0,0.08);
+  --shadow-md: 0 4px 20px rgba(0,0,0,0.10);
+  --shadow-lg: 0 8px 40px rgba(0,0,0,0.12);
+  --shadow-xl: 0 20px 60px rgba(0,0,0,0.15);
+  --r-sm: 8px; --r-md: 12px; --r-lg: 16px;
+  --r-xl: 20px; --r-2xl: 28px; --r-full: 999px;
+  --ease: cubic-bezier(0.4,0,0.2,1);
+  --spring: cubic-bezier(0.34,1.56,0.64,1);
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--dark);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img,svg{display:block;max-width:100%}
+a{text-decoration:none;color:inherit}
+button{cursor:pointer;border:none;background:none;font-family:inherit}
+ul,ol{list-style:none}
+::-webkit-scrollbar{width:5px}
+::-webkit-scrollbar-thumb{background:var(--blue);border-radius:10px}
+
+/* ── TYPOGRAPHY ── */
+.poppins{font-family:'Poppins',sans-serif}
+h1,h2,h3,h4{font-family:'Poppins',sans-serif;font-weight:700;line-height:1.15;color:var(--dark)}
+.text-blue{color:var(--blue)}
+.text-teal{color:var(--teal)}
+.text-green{color:var(--green)}
+.text-grey{color:var(--grey)}
+.text-white{color:#fff}
+
+/* ── BUTTONS ── */
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:var(--r-full);font-family:'Poppins',sans-serif;font-weight:600;font-size:0.9375rem;transition:all 0.25s var(--ease);cursor:pointer;white-space:nowrap;letter-spacing:0.01em}
+.btn-primary{background:var(--blue);color:#fff;box-shadow:0 4px 16px rgba(26,115,232,0.35)}
+.btn-primary:hover{background:var(--blue-dk);transform:translateY(-2px);box-shadow:0 8px 28px rgba(26,115,232,0.45)}
+.btn-teal{background:var(--teal);color:#fff;box-shadow:0 4px 16px rgba(0,200,150,0.35)}
+.btn-teal:hover{background:var(--teal-dk);transform:translateY(-2px);box-shadow:0 8px 28px rgba(0,200,150,0.45)}
+.btn-outline{background:transparent;color:var(--blue);border:2px solid var(--blue)}
+.btn-outline:hover{background:var(--blue-lt);transform:translateY(-2px)}
+.btn-white{background:#fff;color:var(--blue);box-shadow:var(--shadow-md)}
+.btn-white:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg)}
+.btn-lg{padding:16px 36px;font-size:1rem}
+.btn-sm{padding:10px 20px;font-size:0.875rem}
+
+/* ── CONTAINER ── */
+.container{width:100%;max-width:1200px;margin:0 auto;padding:0 24px}
+.s-xs{height:40px}.s-sm{height:60px}.s-md{height:80px}.s-lg{height:100px}.s-xl{height:120px}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp{from{opacity:0;transform:translateY(32px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes scaleIn{from{opacity:0;transform:scale(0.92)}to{opacity:1;transform:scale(1)}}
+@keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+@keyframes floatSlow{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-8px) rotate(1deg)}}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.7;transform:scale(0.97)}}
+@keyframes scanBeam{0%{top:8%}50%{top:82%}100%{top:8%}}
+@keyframes gradientBG{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+@keyframes typeIn{from{width:0}to{width:100%}}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+@keyframes ripple{0%{transform:scale(0.8);opacity:1}100%{transform:scale(2.2);opacity:0}}
+@keyframes countTo{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+@keyframes slideInLeft{from{opacity:0;transform:translateX(-40px)}to{opacity:1;transform:translateX(0)}}
+@keyframes slideInRight{from{opacity:0;transform:translateX(40px)}to{opacity:1;transform:translateX(0)}}
+@keyframes shimmer{from{background-position:-200% 0}to{background-position:200% 0}}
+@keyframes rotate{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+@keyframes dot1{0%,20%{opacity:0}40%,100%{opacity:1}}
+@keyframes dot2{0%,40%{opacity:0}60%,100%{opacity:1}}
+@keyframes dot3{0%,60%{opacity:0}80%,100%{opacity:1}}
+@keyframes greenFlash{0%{background:rgba(0,200,150,0);box-shadow:0 0 0 0 rgba(0,200,150,0)}50%{background:rgba(0,200,150,0.12);box-shadow:0 0 0 20px rgba(0,200,150,0)}100%{background:rgba(0,200,150,0);box-shadow:0 0 0 0 rgba(0,200,150,0)}}
+@keyframes badgePop{0%{transform:scale(0) rotate(-10deg);opacity:0}60%{transform:scale(1.12) rotate(3deg)}100%{transform:scale(1) rotate(0);opacity:1}}
+
+.animate-fade-up{animation:fadeUp 0.6s var(--spring) both}
+.animate-fade-in{animation:fadeIn 0.5s var(--ease) both}
+.animate-scale{animation:scaleIn 0.5s var(--spring) both}
+.d1{animation-delay:0.1s}.d2{animation-delay:0.2s}.d3{animation-delay:0.3s}
+.d4{animation-delay:0.4s}.d5{animation-delay:0.5s}.d6{animation-delay:0.6s}
+.d7{animation-delay:0.7s}.d8{animation-delay:0.8s}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;transition:all 0.3s var(--ease)}
+nav.scrolled{background:rgba(255,255,255,0.95);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);box-shadow:0 1px 0 rgba(0,0,0,0.08)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:1200px;margin:0 auto}
+.nav-logo{display:flex;align-items:center;gap:10px}
+.logo-mark{width:38px;height:38px;border-radius:10px;background:linear-gradient(135deg,var(--blue),var(--teal));display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 4px 12px rgba(26,115,232,0.3)}
+.logo-mark svg{width:20px;height:20px}
+.logo-name{font-family:'Poppins',sans-serif;font-weight:800;font-size:1.1875rem;color:var(--dark);letter-spacing:-0.02em}
+.logo-name span{color:var(--blue)}
+.nav-links{display:flex;align-items:center;gap:32px}
+.nav-link{font-size:0.9rem;font-weight:500;color:var(--grey);transition:color 0.2s}
+.nav-link:hover{color:var(--blue)}
+.nav-actions{display:flex;align-items:center;gap:12px}
+.nav-badge{display:inline-flex;align-items:center;gap:6px;padding:5px 12px;background:var(--blue-lt);border-radius:var(--r-full);font-size:0.75rem;font-weight:600;color:var(--blue)}
+.nav-badge .dot{width:6px;height:6px;background:var(--blue);border-radius:50%;animation:pulse 2s infinite}
+.hamburger{display:none;flex-direction:column;gap:5px;padding:4px}
+.hamburger span{display:block;width:22px;height:2px;background:var(--mid);border-radius:2px;transition:all 0.25s}
+
+/* ── HERO ── */
+.hero{position:relative;padding:140px 0 80px;overflow:hidden;background:#fff}
+.hero::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(26,115,232,0.06) 0%,transparent 70%),radial-gradient(ellipse 50% 40% at 90% 80%,rgba(0,200,150,0.07) 0%,transparent 70%);pointer-events:none}
+.hero-blob{position:absolute;border-radius:50%;filter:blur(80px);pointer-events:none}
+.hero-blob-1{width:600px;height:600px;background:radial-gradient(circle,rgba(26,115,232,0.07),transparent 70%);top:-200px;left:-100px}
+.hero-blob-2{width:400px;height:400px;background:radial-gradient(circle,rgba(0,200,150,0.08),transparent 70%);top:100px;right:-80px}
+.hero-blob-3{width:300px;height:300px;background:radial-gradient(circle,rgba(52,168,83,0.06),transparent 70%);bottom:-50px;left:30%}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(26,115,232,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(26,115,232,0.03) 1px,transparent 1px);background-size:60px 60px;pointer-events:none}
+.hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;position:relative;z-index:1}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;background:linear-gradient(135deg,rgba(26,115,232,0.1),rgba(0,200,150,0.08));border:1px solid rgba(26,115,232,0.2);border-radius:var(--r-full);font-size:0.8125rem;font-weight:600;color:var(--blue);margin-bottom:24px}
+.hero-eyebrow-dot{width:7px;height:7px;background:var(--teal);border-radius:50%;animation:pulse 2s infinite}
+.hero-title{font-family:'Poppins',sans-serif;font-size:clamp(2.4rem,5vw,3.75rem);font-weight:800;line-height:1.08;letter-spacing:-0.03em;color:var(--dark);margin-bottom:24px}
+.hero-title .highlight{background:linear-gradient(135deg,var(--blue),var(--teal));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-title .highlight-red{background:linear-gradient(135deg,#EA4335,#FF7043);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-sub{font-size:1.125rem;color:var(--grey);line-height:1.75;margin-bottom:36px;max-width:520px}
+.hero-sub strong{color:var(--dark);font-weight:600}
+.hero-cta{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:48px}
+.hero-trust{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:6px;font-size:0.8125rem;color:var(--lt-grey);font-weight:500}
+.trust-icon{width:16px;height:16px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px}
+.trust-icon.green{background:#E6F4EA;color:var(--green)}
+
+/* ── PHONE MOCKUP ── */
+.hero-visual{position:relative;display:flex;justify-content:center;align-items:center}
+.phone-cluster{position:relative;width:340px;height:560px;margin:0 auto}
+.phone-main{position:absolute;left:50%;transform:translateX(-50%);width:232px;z-index:2;animation:floatY 5s ease-in-out infinite}
+.phone-side{position:absolute;width:190px;z-index:1;opacity:0.75}
+.phone-left{left:-10px;top:40px;transform:rotate(-8deg);animation:floatSlow 6s ease-in-out infinite;animation-delay:-2s}
+.phone-right{right:-10px;top:80px;transform:rotate(8deg);animation:floatSlow 7s ease-in-out infinite;animation-delay:-4s}
+.phone-frame{background:#fff;border-radius:32px;overflow:hidden;box-shadow:0 32px 80px rgba(0,0,0,0.2),0 0 0 2px rgba(0,0,0,0.08),inset 0 0 0 1px rgba(255,255,255,0.5);padding:0 0 0}
+.phone-notch{height:32px;background:#111;border-radius:0 0 20px 20px;width:100px;margin:0 auto;position:relative;z-index:1}
+.phone-screen{padding:12px 10px;min-height:410px;background:#F8F9FA;display:flex;flex-direction:column;gap:8px}
+.ps-header{background:#fff;border-radius:12px;padding:10px 12px;display:flex;justify-content:space-between;align-items:center;box-shadow:var(--shadow-sm)}
+.ps-logo{display:flex;align-items:center;gap:5px;font-family:'Poppins',sans-serif;font-weight:800;font-size:11px;color:var(--dark)}
+.ps-logo-icon{width:16px;height:16px;border-radius:4px;background:linear-gradient(135deg,var(--blue),var(--teal));display:flex;align-items:center;justify-content:center}
+.ps-greeting{font-size:7.5px;color:var(--grey)}
+.ps-greeting strong{color:var(--dark);font-size:9px}
+.ps-score-badge{background:linear-gradient(135deg,var(--blue),var(--teal));color:#fff;padding:3px 8px;border-radius:var(--r-full);font-size:7px;font-weight:700}
+
+.mini-feature-card{background:#fff;border-radius:10px;padding:10px;box-shadow:var(--shadow-sm);display:flex;align-items:center;gap:8px}
+.mfc-icon{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0}
+.mfc-blue{background:rgba(26,115,232,0.1)}
+.mfc-teal{background:rgba(0,200,150,0.1)}
+.mfc-red{background:rgba(234,67,53,0.1)}
+.mfc-info{flex:1}
+.mfc-title{font-size:8px;font-weight:700;color:var(--dark)}
+.mfc-sub{font-size:7px;color:var(--grey)}
+.mfc-status{font-size:6.5px;font-weight:700;padding:2px 6px;border-radius:var(--r-full)}
+.status-auth{background:#E6F4EA;color:var(--green)}
+.status-mod{background:#FFF3E0;color:#E65100}
+.status-high{background:#FCE8E6;color:var(--red)}
+
+.scan-card{background:#fff;border-radius:10px;padding:10px;box-shadow:var(--shadow-sm)}
+.scan-bar{background:linear-gradient(90deg,rgba(26,115,232,0.15),rgba(0,200,150,0.15));height:3px;border-radius:2px;margin:6px 0;position:relative;overflow:hidden}
+.scan-bar::after{content:'';position:absolute;top:0;left:-50%;width:50%;height:100%;background:linear-gradient(90deg,transparent,rgba(26,115,232,0.6),transparent);animation:shimmer 1.5s infinite}
+.scan-result{display:flex;align-items:center;gap:6px;margin-top:6px;padding:6px 8px;background:linear-gradient(135deg,rgba(0,200,150,0.08),rgba(52,168,83,0.06));border:1px solid rgba(0,200,150,0.25);border-radius:8px}
+.sr-check{width:18px;height:18px;border-radius:50%;background:var(--teal);display:flex;align-items:center;justify-content:center;font-size:9px;color:#fff;font-weight:900;flex-shrink:0}
+.sr-text{font-size:8px;font-weight:800;color:var(--teal-dk)}
+
+/* Hero decoration */
+.hero-glow-circle{position:absolute;border-radius:50%;pointer-events:none}
+.hgc-1{width:300px;height:300px;background:radial-gradient(circle,rgba(26,115,232,0.1),transparent 70%);right:-60px;top:-40px}
+.hgc-2{width:200px;height:200px;background:radial-gradient(circle,rgba(0,200,150,0.12),transparent 70%);right:30px;bottom:60px}
+
+/* ── STATS TICKER ── */
+.stats-ticker{padding:24px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:#fff}
+.ticker-inner{display:flex;align-items:center;justify-content:center;gap:0;flex-wrap:wrap}
+.ticker-item{display:flex;align-items:center;gap:8px;padding:0 40px;border-right:1px solid var(--border)}
+.ticker-item:last-child{border-right:none}
+.ticker-num{font-family:'Poppins',sans-serif;font-weight:800;font-size:1.75rem;color:var(--blue);line-height:1}
+.ticker-label{font-size:0.8125rem;color:var(--grey);line-height:1.3;max-width:120px}
+.ticker-icon{font-size:1.5rem;flex-shrink:0}
+
+/* ── SECTION BASICS ── */
+.section{padding:96px 0}
+.section-alt{background:var(--bg-soft)}
+.section-label{display:inline-flex;align-items:center;gap:8px;font-size:0.8125rem;font-weight:600;color:var(--blue);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:16px}
+.section-label-dot{width:6px;height:6px;border-radius:50%;background:var(--teal)}
+.section-title{font-family:'Poppins',sans-serif;font-size:clamp(1.875rem,4vw,2.875rem);font-weight:800;line-height:1.15;letter-spacing:-0.025em;margin-bottom:16px}
+.section-sub{font-size:1.0625rem;color:var(--grey);line-height:1.75;max-width:600px}
+.text-center{text-align:center}
+.mx-auto{margin-left:auto;margin-right:auto}
+
+/* ── FEATURES ── */
+.features-intro{text-align:center;margin-bottom:64px}
+.features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+
+.feature-card{position:relative;padding:28px;background:#fff;border:1px solid var(--border);border-radius:var(--r-xl);transition:all 0.3s var(--ease);overflow:hidden;cursor:default}
+.feature-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,var(--fc-from,rgba(26,115,232,0.04)),var(--fc-to,rgba(26,115,232,0.00)));opacity:0;transition:opacity 0.3s}
+.feature-card:hover{border-color:transparent;box-shadow:var(--shadow-xl);transform:translateY(-6px)}
+.feature-card:hover::before{opacity:1}
+.fc-icon-wrap{width:54px;height:54px;border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:18px;flex-shrink:0}
+.fc-label{display:inline-block;font-size:0.6875rem;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;padding:3px 8px;border-radius:var(--r-full);margin-bottom:12px}
+.fc-title{font-family:'Poppins',sans-serif;font-weight:700;font-size:1.0625rem;margin-bottom:10px}
+.fc-desc{font-size:0.9rem;color:var(--grey);line-height:1.65}
+.fc-arrow{position:absolute;bottom:24px;right:24px;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;transition:all 0.25s var(--ease);opacity:0;transform:translateX(-8px)}
+.feature-card:hover .fc-arrow{opacity:1;transform:translateX(0)}
+
+/* ── IMPACT / PROBLEM SECTION ── */
+.impact-section{padding:96px 0;background:linear-gradient(135deg,#0D1B2A 0%, #1A3A5C 40%, #0A2240 100%);position:relative;overflow:hidden}
+.impact-grid-bg{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.03) 1px,transparent 1px);background-size:50px 50px;pointer-events:none}
+.impact-inner{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;position:relative;z-index:1}
+.impact-label-white{display:inline-flex;align-items:center;gap:8px;font-size:0.8125rem;font-weight:600;color:rgba(255,255,255,0.6);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:16px}
+.impact-title{font-family:'Poppins',sans-serif;font-size:clamp(2rem,4vw,3rem);font-weight:800;color:#fff;line-height:1.15;letter-spacing:-0.025em;margin-bottom:20px}
+.impact-sub{font-size:1.0625rem;color:rgba(255,255,255,0.65);line-height:1.75;margin-bottom:36px}
+.sdg-chips{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:28px}
+.sdg-chip{display:inline-flex;align-items:center;gap:7px;padding:8px 16px;border-radius:var(--r-full);font-weight:700;font-size:0.9rem}
+.sdg-3{background:rgba(52,168,83,0.2);color:#69D981;border:1px solid rgba(52,168,83,0.3)}
+.sdg-10{background:rgba(26,115,232,0.2);color:#82B1FF;border:1px solid rgba(26,115,232,0.3)}
+
+.stat-cards{display:flex;flex-direction:column;gap:16px}
+.stat-card-big{padding:24px 28px;border-radius:var(--r-xl);background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);backdrop-filter:blur(10px);transition:all 0.3s}
+.stat-card-big:hover{background:rgba(255,255,255,0.09);border-color:rgba(255,255,255,0.18);transform:translateX(6px)}
+.scb-num{font-family:'Poppins',sans-serif;font-size:2.5rem;font-weight:900;line-height:1;margin-bottom:6px}
+.scb-title{font-size:0.9375rem;color:rgba(255,255,255,0.8);font-weight:600;margin-bottom:4px}
+.scb-source{font-size:0.8rem;color:rgba(255,255,255,0.4)}
+.scb-bar{margin-top:12px;height:4px;background:rgba(255,255,255,0.1);border-radius:2px}
+.scb-fill{height:100%;border-radius:2px;transition:width 1.5s var(--ease)}
+
+/* ── DEMO SECTION ── */
+.demo-section{padding:96px 0;position:relative;overflow:hidden}
+.demo-section::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,#fff 0%,var(--bg-blue) 50%,#fff 100%);pointer-events:none}
+.demo-inner{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;position:relative;z-index:1}
+.demo-tabs{display:flex;gap:4px;background:var(--bg-soft);border:1px solid var(--border);border-radius:var(--r-full);padding:4px;margin-bottom:28px;width:fit-content}
+.demo-tab{padding:8px 20px;border-radius:var(--r-full);font-size:0.875rem;font-weight:600;color:var(--grey);transition:all 0.2s;cursor:pointer}
+.demo-tab.active{background:#fff;color:var(--blue);box-shadow:var(--shadow-sm)}
+.demo-card{background:#fff;border:1px solid var(--border);border-radius:var(--r-2xl);padding:28px;box-shadow:var(--shadow-lg);position:relative;overflow:hidden}
+.demo-card-header{display:flex;align-items:center;gap:10px;margin-bottom:20px}
+.demo-win-dots{display:flex;gap:5px}
+.demo-dot{width:10px;height:10px;border-radius:50%}
+.dd-r{background:#FF5F57}.dd-y{background:#FFBD2E}.dd-g{background:#28CA42}
+.demo-card-title{font-size:0.875rem;font-weight:700;color:var(--grey);margin-left:4px}
+.demo-ai-badge{margin-left:auto;display:flex;align-items:center;gap:5px;font-size:0.75rem;font-weight:600;color:var(--blue);background:var(--blue-lt);padding:4px 10px;border-radius:var(--r-full)}
+.ai-spinner{width:8px;height:8px;border:1.5px solid rgba(26,115,232,0.3);border-top-color:var(--blue);border-radius:50%;animation:rotate 0.8s linear infinite;display:none}
+.ai-spinner.active{display:block}
+
+/* Symptom Checker Demo */
+.symptom-input-area{position:relative;margin-bottom:16px}
+.symptom-field{width:100%;padding:12px 16px;border:1.5px solid var(--border);border-radius:var(--r-md);font-family:inherit;font-size:0.9375rem;color:var(--dark);background:var(--bg-soft);outline:none;transition:all 0.2s;resize:none;height:80px}
+.symptom-field:focus{border-color:var(--blue);background:#fff;box-shadow:0 0 0 3px rgba(26,115,232,0.1)}
+.symptom-tags{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:16px}
+.stag{padding:5px 12px;border-radius:var(--r-full);background:var(--bg-soft);border:1.5px solid var(--border);font-size:0.8125rem;font-weight:500;color:var(--grey);cursor:pointer;transition:all 0.2s}
+.stag:hover{border-color:var(--blue);color:var(--blue);background:var(--blue-lt)}
+.stag.sel{border-color:var(--blue);color:var(--blue);background:var(--blue-lt)}
+
+.analyze-btn{width:100%;padding:13px;border-radius:var(--r-lg);background:linear-gradient(135deg,var(--blue),var(--teal));color:#fff;font-family:'Poppins',sans-serif;font-weight:700;font-size:0.9375rem;cursor:pointer;transition:all 0.25s;border:none;display:flex;align-items:center;justify-content:center;gap:8px;margin-bottom:16px}
+.analyze-btn:hover{opacity:0.92;transform:translateY(-2px);box-shadow:var(--shadow-lg)}
+
+.urgency-result{padding:16px;border-radius:var(--r-lg);display:none}
+.ur-moderate{background:linear-gradient(135deg,rgba(251,188,4,0.08),rgba(251,188,4,0.04));border:1.5px solid rgba(251,188,4,0.3)}
+.ur-high{background:linear-gradient(135deg,rgba(234,67,53,0.08),rgba(234,67,53,0.04));border:1.5px solid rgba(234,67,53,0.3)}
+.ur-low{background:linear-gradient(135deg,rgba(52,168,83,0.08),rgba(52,168,83,0.04));border:1.5px solid rgba(52,168,83,0.3)}
+.ur-header{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.ur-icon{font-size:1.375rem}
+.ur-level{font-family:'Poppins',sans-serif;font-weight:800;font-size:1rem;letter-spacing:0.02em}
+.ur-desc{font-size:0.8125rem;color:var(--grey);line-height:1.5;margin-bottom:10px}
+.ur-steps{display:flex;flex-direction:column;gap:6px}
+.ur-step{display:flex;align-items:center;gap:8px;font-size:0.8125rem;padding:7px 10px;background:#fff;border-radius:8px;box-shadow:var(--shadow-sm)}
+.ur-step-num{width:20px;height:20px;border-radius:50%;background:var(--blue);color:#fff;font-size:0.7rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+
+/* Medicine Scanner Demo */
+.scanner-view{background:linear-gradient(135deg,#0D1B2A,#1A3A5C);border-radius:var(--r-xl);overflow:hidden;position:relative;height:220px;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.sv-corners{position:absolute;inset:15px}
+.svc{position:absolute;width:22px;height:22px;border-color:var(--teal);border-style:solid}
+.svc-tl{top:0;left:0;border-width:3px 0 0 3px;border-radius:4px 0 0 0}
+.svc-tr{top:0;right:0;border-width:3px 3px 0 0;border-radius:0 4px 0 0}
+.svc-bl{bottom:0;left:0;border-width:0 0 3px 3px;border-radius:0 0 0 4px}
+.svc-br{bottom:0;right:0;border-width:0 3px 3px 0;border-radius:0 0 4px 0}
+.sv-beam{position:absolute;left:20px;right:20px;height:2px;background:linear-gradient(90deg,transparent,var(--teal),transparent);box-shadow:0 0 12px var(--teal),0 0 4px rgba(0,200,150,0.5);animation:scanBeam 2.5s ease-in-out infinite;top:20%}
+.sv-text{color:rgba(255,255,255,0.5);font-size:0.8125rem;text-align:center;z-index:1}
+.sv-barcode{width:140px;height:70px;background:repeating-linear-gradient(90deg,rgba(255,255,255,0.2) 0,rgba(255,255,255,0.2) 2px,transparent 2px,transparent 5px,rgba(255,255,255,0.15) 5px,rgba(255,255,255,0.15) 8px,transparent 8px,transparent 12px,rgba(255,255,255,0.18) 12px,rgba(255,255,255,0.18) 15px,transparent 15px,transparent 18px);opacity:0.7;margin-bottom:6px}
+
+.med-samples{display:flex;flex-direction:column;gap:8px;margin-bottom:14px}
+.med-sample-btn{display:flex;align-items:center;gap:10px;padding:10px 14px;background:var(--bg-soft);border:1.5px solid var(--border);border-radius:var(--r-lg);cursor:pointer;transition:all 0.2s;text-align:left}
+.med-sample-btn:hover{border-color:var(--teal);background:var(--teal-lt)}
+.ms-pill-icon{font-size:1.25rem}
+.ms-info{flex:1}
+.ms-name{font-weight:600;font-size:0.8125rem;color:var(--dark)}
+.ms-brand{font-size:0.75rem;color:var(--grey)}
+.ms-badge{font-size:0.6875rem;font-weight:700;padding:3px 8px;border-radius:var(--r-full)}
+.ms-auth{background:#E6F4EA;color:var(--green)}
+.ms-susp{background:#FFF3E0;color:#E65100}
+.ms-fake{background:#FCE8E6;color:var(--red)}
+
+.scan-result-panel{padding:16px;border-radius:var(--r-lg);display:none}
+.srp-authentic{background:linear-gradient(135deg,rgba(0,200,150,0.08),rgba(52,168,83,0.04));border:2px solid rgba(0,200,150,0.3)}
+.srp-suspicious{background:linear-gradient(135deg,rgba(251,188,4,0.1),rgba(251,188,4,0.04));border:2px solid rgba(251,188,4,0.35)}
+.srp-counterfeit{background:linear-gradient(135deg,rgba(234,67,53,0.1),rgba(234,67,53,0.04));border:2px solid rgba(234,67,53,0.3)}
+.srp-header{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.srp-badge{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.25rem;flex-shrink:0}
+.srp-auth-bg{background:rgba(0,200,150,0.15)}
+.srp-susp-bg{background:rgba(251,188,4,0.15)}
+.srp-fake-bg{background:rgba(234,67,53,0.15)}
+.srp-status{font-family:'Poppins',sans-serif;font-size:1.375rem;font-weight:900;letter-spacing:0.05em}
+.srp-auth-text{color:var(--teal-dk)}
+.srp-susp-text{color:#E65100}
+.srp-fake-text{color:var(--red)}
+.srp-checks{display:flex;flex-direction:column;gap:5px}
+.srp-check-item{display:flex;align-items:center;gap:7px;font-size:0.8rem}
+.srp-chk-icon{width:16px;height:16px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:9px;flex-shrink:0}
+.chk-pass{background:#E6F4EA;color:var(--green)}
+.chk-fail{background:#FCE8E6;color:var(--red)}
+.chk-warn{background:#FFF3E0;color:#E65100}
+
+/* ── STORY SECTION ── */
+.story-section{padding:96px 0;background:linear-gradient(180deg,var(--bg-soft) 0%,#fff 100%)}
+.story-inner{display:grid;grid-template-columns:1fr 1.2fr;gap:80px;align-items:center}
+.story-persona{display:flex;align-items:center;gap:14px;padding:16px 20px;background:#fff;border:1px solid var(--border);border-radius:var(--r-xl);box-shadow:var(--shadow-sm);margin-bottom:24px}
+.persona-avatar{width:54px;height:54px;border-radius:50%;background:linear-gradient(135deg,#F4C542,#E8A320);display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0}
+.persona-info{}
+.persona-name{font-weight:700;font-size:1rem}
+.persona-desc{font-size:0.8125rem;color:var(--grey);margin-top:2px}
+.story-title{font-family:'Poppins',sans-serif;font-size:clamp(1.75rem,3.5vw,2.5rem);font-weight:800;line-height:1.2;letter-spacing:-0.025em;margin-bottom:16px}
+.story-quote{font-size:1.0625rem;color:var(--grey);font-style:italic;padding:16px 20px;border-left:4px solid var(--blue);background:var(--blue-lt);border-radius:0 var(--r-md) var(--r-md) 0;margin-bottom:24px;line-height:1.7}
+.story-steps{display:flex;flex-direction:column;gap:14px}
+.sstep{display:flex;align-items:flex-start;gap:14px}
+.sstep-num{width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--teal));color:#fff;font-weight:800;font-size:0.875rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 4px 12px rgba(26,115,232,0.25)}
+.sstep-content{}
+.sstep-title{font-weight:700;font-size:0.9375rem;margin-bottom:2px}
+.sstep-desc{font-size:0.875rem;color:var(--grey);line-height:1.5}
+
+/* Story timeline visual */
+.story-visual{position:relative}
+.story-phone-wrap{background:linear-gradient(135deg,#EEF4FF,#E6FAF5);border-radius:28px;padding:28px;display:flex;justify-content:center;position:relative}
+.story-phone{width:220px;animation:floatY 5s ease-in-out infinite}
+.story-badge{position:absolute;padding:10px 16px;background:#fff;border-radius:var(--r-xl);box-shadow:var(--shadow-lg);font-size:0.875rem;font-weight:600;display:flex;align-items:center;gap:8px;animation:floatSlow 4s ease-in-out infinite}
+.sb-1{top:20px;right:-10px;animation-delay:-1s}
+.sb-2{bottom:60px;left:-20px;animation-delay:-2s}
+.sb-icon{font-size:1.2rem}
+
+/* ── TECH STACK SECTION ── */
+.tech-section{padding:96px 0}
+.tech-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:48px}
+.tech-card{padding:24px;background:#fff;border:1px solid var(--border);border-radius:var(--r-xl);display:flex;align-items:center;gap:14px;transition:all 0.25s var(--ease)}
+.tech-card:hover{box-shadow:var(--shadow-lg);border-color:transparent;transform:translateY(-4px)}
+.tech-icon-wrap{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0}
+.tc-blue{background:rgba(26,115,232,0.1)}
+.tc-red{background:rgba(234,67,53,0.1)}
+.tc-yellow{background:rgba(251,188,4,0.12)}
+.tc-teal{background:rgba(0,200,150,0.1)}
+.tc-green{background:rgba(52,168,83,0.1)}
+.tc-purple{background:rgba(103,58,183,0.1)}
+.tech-name{font-weight:700;font-size:0.9375rem;margin-bottom:2px}
+.tech-role{font-size:0.8125rem;color:var(--grey);line-height:1.4}
+
+/* ── WHY WE WIN ── */
+.win-section{padding:96px 0;background:linear-gradient(135deg,var(--bg-soft) 0%,#fff 100%)}
+.win-inner{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.win-pillar{display:flex;align-items:flex-start;gap:14px;padding:20px 22px;background:#fff;border:1px solid var(--border);border-radius:var(--r-xl);transition:all 0.25s;margin-bottom:12px}
+.win-pillar:hover{box-shadow:var(--shadow-lg);border-color:transparent;transform:translateX(6px)}
+.wp-icon{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.wp-title{font-weight:700;font-size:0.9375rem;margin-bottom:4px}
+.wp-desc{font-size:0.8375rem;color:var(--grey);line-height:1.55}
+
+.comparison-table{overflow:hidden;border-radius:var(--r-xl);border:1px solid var(--border)}
+.ct-header{display:grid;grid-template-columns:2fr 1fr 1fr 1fr 1fr;background:var(--bg-soft);padding:12px 16px;border-bottom:1px solid var(--border)}
+.ct-hcell{font-size:0.8125rem;font-weight:700;color:var(--grey);text-align:center}
+.ct-hcell.us{color:var(--blue)}
+.ct-row{display:grid;grid-template-columns:2fr 1fr 1fr 1fr 1fr;padding:12px 16px;border-bottom:1px solid var(--border);align-items:center;transition:background 0.2s}
+.ct-row:last-child{border-bottom:none}
+.ct-row:hover{background:var(--bg-soft)}
+.ct-cell{text-align:center;font-size:0.875rem}
+.ct-cell.feat{text-align:left;font-weight:500;font-size:0.875rem}
+.ct-cell.us-cell{font-weight:700}
+.icon-check{color:var(--green);font-weight:900;font-size:1rem}
+.icon-cross{color:#CCC;font-size:1rem}
+.icon-part{color:var(--yellow)}
+
+/* ── FINAL CTA ── */
+.final-cta{padding:120px 0;background:linear-gradient(135deg,#0A1628 0%,#1A3A5C 50%,#0D2D45 100%);position:relative;overflow:hidden;text-align:center}
+.fc-bg-1{position:absolute;width:600px;height:600px;background:radial-gradient(circle,rgba(26,115,232,0.15),transparent 70%);top:-200px;left:-100px;pointer-events:none}
+.fc-bg-2{position:absolute;width:500px;height:500px;background:radial-gradient(circle,rgba(0,200,150,0.12),transparent 70%);bottom:-150px;right:-50px;pointer-events:none}
+.fc-eyebrow{display:inline-flex;align-items:center;gap:8px;padding:8px 18px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:var(--r-full);font-size:0.875rem;font-weight:600;color:rgba(255,255,255,0.8);margin-bottom:28px}
+.fc-title{font-family:'Poppins',sans-serif;font-size:clamp(2.25rem,5vw,3.75rem);font-weight:900;color:#fff;line-height:1.1;letter-spacing:-0.025em;margin-bottom:20px}
+.fc-sub{font-size:1.125rem;color:rgba(255,255,255,0.65);line-height:1.75;max-width:550px;margin:0 auto 44px}
+.fc-btns{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;margin-bottom:56px}
+.fc-trust-row{display:flex;align-items:center;justify-content:center;gap:28px;flex-wrap:wrap}
+.fc-trust-item{display:flex;align-items:center;gap:7px;font-size:0.8125rem;color:rgba(255,255,255,0.5);font-weight:500}
+.fc-trust-icon{font-size:1rem}
+
+/* ── FOOTER ── */
+footer{background:#fff;border-top:1px solid var(--border);padding:56px 0 32px}
+.footer-inner{display:flex;gap:60px;flex-wrap:wrap;margin-bottom:40px}
+.footer-brand{flex:1;min-width:200px}
+.footer-tagline{font-size:0.875rem;color:var(--grey);margin-top:10px;line-height:1.6;max-width:240px}
+.footer-cols{display:flex;gap:48px;flex-wrap:wrap}
+.footer-col-title{font-weight:700;font-size:0.875rem;margin-bottom:14px;color:var(--dark)}
+.footer-links{display:flex;flex-direction:column;gap:8px}
+.footer-link{font-size:0.875rem;color:var(--grey);transition:color 0.2s}
+.footer-link:hover{color:var(--blue)}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:24px;border-top:1px solid var(--border);flex-wrap:wrap;gap:12px}
+.footer-copy{font-size:0.8125rem;color:var(--lt-grey)}
+.footer-badges{display:flex;gap:10px;flex-wrap:wrap}
+.footer-badge{display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border-radius:var(--r-full);background:var(--bg-soft);border:1px solid var(--border);font-size:0.75rem;font-weight:600;color:var(--grey)}
+
+/* ── SCROLL REVEAL ── */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity 0.7s var(--ease),transform 0.7s var(--ease)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-left{opacity:0;transform:translateX(-32px);transition:opacity 0.7s var(--ease),transform 0.7s var(--ease)}
+.reveal-left.visible{opacity:1;transform:translateX(0)}
+.reveal-right{opacity:0;transform:translateX(32px);transition:opacity 0.7s var(--ease),transform 0.7s var(--ease)}
+.reveal-right.visible{opacity:1;transform:translateX(0)}
+
+/* ── MOBILE DRAWER ── */
+.mobile-drawer{position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:999;display:none;align-items:flex-start;justify-content:flex-end}
+.mobile-drawer.open{display:flex;animation:fadeIn 0.2s}
+.drawer-panel{background:#fff;width:280px;height:100%;padding:24px;padding-top:80px;box-shadow:var(--shadow-xl);animation:slideInRight 0.3s var(--spring)}
+.drawer-links{display:flex;flex-direction:column;gap:4px}
+.drawer-link{padding:12px 14px;border-radius:var(--r-md);font-size:0.9375rem;font-weight:500;color:var(--mid);transition:all 0.2s}
+.drawer-link:hover{background:var(--bg-soft);color:var(--blue)}
+.drawer-cta{margin-top:20px;display:flex;flex-direction:column;gap:10px}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1024px){
+  .features-grid{grid-template-columns:repeat(2,1fr)}
+  .tech-grid{grid-template-columns:repeat(2,1fr)}
+  .win-inner{gap:36px}
+}
+@media(max-width:768px){
+  nav .nav-links,.nav-badge{display:none}
+  .hamburger{display:flex}
+  .hero-inner{grid-template-columns:1fr;gap:48px;text-align:center}
+  .hero-sub{margin-left:auto;margin-right:auto}
+  .hero-cta{justify-content:center}
+  .hero-trust{justify-content:center}
+  .hero-visual{display:none}
+  .ticker-inner{gap:0}
+  .ticker-item{padding:12px 20px}
+  .features-grid{grid-template-columns:1fr}
+  .impact-inner{grid-template-columns:1fr;gap:48px}
+  .demo-inner{grid-template-columns:1fr;gap:40px}
+  .story-inner{grid-template-columns:1fr;gap:40px}
+  .story-visual{display:none}
+  .win-inner{grid-template-columns:1fr}
+  .comparison-table{display:none}
+  .tech-grid{grid-template-columns:1fr}
+  .footer-inner{flex-direction:column;gap:32px}
+  .footer-cols{gap:28px}
+  .footer-bottom{flex-direction:column;align-items:flex-start}
+  .fc-btns{flex-direction:column;align-items:center}
+  .section{padding:72px 0}
+}
+@media(max-width:480px){
+  .ticker-inner{flex-direction:column;gap:0}
+  .ticker-item{border-right:none;border-bottom:1px solid var(--border);width:100%;justify-content:center}
+  .ticker-item:last-child{border-bottom:none}
+  .sdg-chips{justify-content:flex-start}
+  .demo-tabs{width:100%}
+  .demo-tab{flex:1;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════════════════
+     NAVIGATION
+══════════════════════════════════════════════════════════════ -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">
+      <div class="logo-mark">
+        <svg viewBox="0 0 20 20" fill="none">
+          <path d="M10 3v14M3 10h14" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <span class="logo-name">Medi<span>Link</span> 2.0</span>
+    </a>
+    <div class="nav-links">
+      <a href="#features" class="nav-link">Features</a>
+      <a href="#demo" class="nav-link">Live Demo</a>
+      <a href="#impact" class="nav-link">Impact</a>
+      <a href="#story" class="nav-link">Our Story</a>
+      <a href="#tech" class="nav-link">Technology</a>
+    </div>
+    <div class="nav-actions">
+      <div class="nav-badge"><div class="dot"></div> Built for Bharat</div>
+      <a href="app.html" class="btn btn-primary btn-sm" style="border-radius:var(--r-full)">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3l14 9-14 9V3z"/></svg>
+        Launch App
+      </a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Drawer -->
+<div class="mobile-drawer" id="mobileDrawer" onclick="closeDrawer(event)">
+  <div class="drawer-panel">
+    <div class="drawer-links">
+      <a href="#features" class="drawer-link" onclick="closeMenu()">Features</a>
+      <a href="#demo" class="drawer-link" onclick="closeMenu()">Live Demo</a>
+      <a href="#impact" class="drawer-link" onclick="closeMenu()">Impact</a>
+      <a href="#story" class="drawer-link" onclick="closeMenu()">Our Story</a>
+      <a href="#tech" class="drawer-link" onclick="closeMenu()">Technology</a>
+    </div>
+    <div class="drawer-cta">
+      <a href="app.html" class="btn btn-primary btn-sm" style="justify-content:center">Launch App →</a>
+      <a href="#demo" class="btn btn-outline btn-sm" onclick="closeMenu()" style="justify-content:center">Try Demo</a>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════
+     HERO
+══════════════════════════════════════════════════════════════ -->
+<section class="hero" id="home">
+  <div class="hero-blob hero-blob-1"></div>
+  <div class="hero-blob hero-blob-2"></div>
+  <div class="hero-blob hero-blob-3"></div>
+  <div class="hero-grid"></div>
+  <div class="container">
+    <div class="hero-inner">
+      <!-- LEFT CONTENT -->
+      <div class="hero-content">
+        <div class="hero-eyebrow animate-fade-up">
+          <div class="hero-eyebrow-dot"></div>
+          Google Solution Challenge 2026 · SDG 3 + SDG 10
+        </div>
+        <h1 class="hero-title animate-fade-up d1">
+          <span class="highlight-red">80 Crore Indians</span><br/>
+          Lack Access to<br/>
+          Reliable Healthcare.<br/>
+          <span class="highlight">We Fixed That.</span>
+        </h1>
+        <p class="hero-sub animate-fade-up d2">
+          From first symptom to verified medicine — <strong>MediLink 2.0</strong> is India's first end-to-end AI healthcare companion. Works on <strong>2G networks</strong>. Free for rural India.
+        </p>
+        <div class="hero-cta animate-fade-up d3">
+          <a href="#demo" class="btn btn-primary btn-lg">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            Try Live Demo
+          </a>
+          <a href="#demo" class="btn btn-teal btn-lg" id="heroScanBtn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9V5a2 2 0 012-2h4M3 15v4a2 2 0 002 2h4M21 9V5a2 2 0 00-2-2h-4M21 15v4a2 2 0 01-2 2h-4M8 12h8"/></svg>
+            Scan Medicine Now
+          </a>
+        </div>
+        <div class="hero-trust animate-fade-up d4">
+          <div class="trust-item"><div class="trust-icon green">✓</div>AI-Powered by Gemini</div>
+          <div class="trust-item"><div class="trust-icon green">✓</div>Works on 2G</div>
+          <div class="trust-item"><div class="trust-icon green">✓</div>8 Indian Languages</div>
+          <div class="trust-item"><div class="trust-icon green">✓</div>Always Free</div>
+        </div>
+      </div>
+
+      <!-- RIGHT: PHONE MOCKUP -->
+      <div class="hero-visual animate-scale d2">
+        <div class="hero-glow-circle hgc-1"></div>
+        <div class="hero-glow-circle hgc-2"></div>
+        <div class="phone-cluster">
+          <!-- Back Left Phone: AsliDawa -->
+          <div class="phone phone-side phone-left">
+            <div class="phone-frame">
+              <div class="phone-notch" style="width:70px;height:22px"></div>
+              <div class="phone-screen" style="min-height:300px;gap:6px;padding:10px 8px">
+                <div class="ps-header">
+                  <div class="ps-logo"><div class="ps-logo-icon"><svg width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M4 1.2v5.6M1.4 4h5.2" stroke="white" stroke-width="1.2" stroke-linecap="round"/></svg></div>AsliDawa™</div>
+                  <div style="font-size:7px;color:var(--grey)">SCANNER</div>
+                </div>
+                <div style="background:linear-gradient(135deg,#1a3a5c,#0d1b2a);border-radius:8px;height:80px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;flex-shrink:0">
+                  <div style="position:absolute;left:6px;right:6px;height:1.5px;background:linear-gradient(90deg,transparent,var(--teal),transparent);animation:scanBeam 2s ease-in-out infinite;box-shadow:0 0 8px var(--teal)"></div>
+                  <div style="font-size:9px;color:rgba(255,255,255,0.5);z-index:1">Scanning…</div>
+                </div>
+                <div style="background:rgba(0,200,150,0.08);border:1px solid rgba(0,200,150,0.3);border-radius:8px;padding:8px;display:flex;align-items:center;gap:6px">
+                  <div style="width:20px;height:20px;background:var(--teal);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;color:white;font-weight:900;flex-shrink:0">✓</div>
+                  <div>
+                    <div style="font-size:8px;font-weight:900;color:var(--teal-dk);letter-spacing:0.04em">AUTHENTIC</div>
+                    <div style="font-size:7px;color:var(--grey)">Paracetamol 500mg · Cipla</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Main Front Phone: Dashboard -->
+          <div class="phone phone-main">
+            <div class="phone-frame" style="border-radius:40px">
+              <div class="phone-notch"></div>
+              <div class="phone-screen">
+                <div class="ps-header">
+                  <div>
+                    <div class="ps-greeting">Good Morning,</div>
+                    <div class="ps-greeting"><strong>Priya 👋</strong></div>
+                  </div>
+                  <div class="ps-score-badge">742 pts</div>
+                </div>
+                <!-- Symptom Card -->
+                <div class="mini-feature-card">
+                  <div class="mfc-icon mfc-blue">🤒</div>
+                  <div class="mfc-info">
+                    <div class="mfc-title">Symptom Check</div>
+                    <div class="mfc-sub">Fever + Headache → 2 days</div>
+                  </div>
+                  <div class="mfc-status status-mod">MODERATE</div>
+                </div>
+                <!-- Scan Card -->
+                <div class="scan-card">
+                  <div style="font-size:8px;font-weight:700;margin-bottom:5px;color:var(--dark)">💊 Medicine Scan</div>
+                  <div class="scan-bar"></div>
+                  <div class="scan-result">
+                    <div class="sr-check">✓</div>
+                    <div>
+                      <div class="sr-text">AUTHENTIC — Paracetamol 500mg</div>
+                      <div style="font-size:6.5px;color:var(--grey)">Cipla Ltd · Batch C24A1029 · Verified ✓</div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Clinic Card -->
+                <div class="mini-feature-card">
+                  <div class="mfc-icon mfc-teal" style="font-size:13px">🏥</div>
+                  <div class="mfc-info">
+                    <div class="mfc-title">Nearby PHC</div>
+                    <div class="mfc-sub">0.8 km · Open · Free</div>
+                  </div>
+                  <div class="mfc-status status-auth">DIRECTIONS</div>
+                </div>
+                <!-- SOS Strip -->
+                <div style="background:linear-gradient(135deg,rgba(234,67,53,0.08),rgba(234,67,53,0.04));border:1px solid rgba(234,67,53,0.25);border-radius:8px;padding:7px 10px;display:flex;align-items:center;gap:6px">
+                  <div style="width:20px;height:20px;background:var(--red);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:9px;flex-shrink:0;animation:pulse 2s infinite">🆘</div>
+                  <div style="font-size:7.5px;font-weight:700;color:var(--red)">Emergency SOS</div>
+                  <div style="margin-left:auto;font-size:7px;color:var(--grey)">1-tap ready</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Back Right Phone: Health Feed -->
+          <div class="phone phone-side phone-right">
+            <div class="phone-frame">
+              <div class="phone-notch" style="width:70px;height:22px"></div>
+              <div class="phone-screen" style="min-height:300px;gap:6px;padding:10px 8px">
+                <div class="ps-header">
+                  <div class="ps-logo"><div class="ps-logo-icon"><svg width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M4 1.2v5.6M1.4 4h5.2" stroke="white" stroke-width="1.2" stroke-linecap="round"/></svg></div>Feed</div>
+                  <div style="font-size:7px;color:var(--blue);font-weight:700">AI Pick</div>
+                </div>
+                <div style="background:linear-gradient(135deg,rgba(26,115,232,0.08),rgba(0,200,150,0.06));border:1px solid rgba(26,115,232,0.15);border-radius:8px;padding:8px">
+                  <div style="font-size:7px;font-weight:700;color:var(--blue);margin-bottom:3px">🛡️ PREVENTION</div>
+                  <div style="font-size:8px;font-weight:700;line-height:1.3;color:var(--dark)">How to Prevent Dengue This Monsoon</div>
+                </div>
+                <div style="background:#fff;border:1px solid var(--border);border-radius:8px;padding:8px">
+                  <div style="font-size:7px;font-weight:700;color:var(--green);margin-bottom:3px">🥗 NUTRITION</div>
+                  <div style="font-size:8px;font-weight:700;color:var(--dark)">Dal-Chawal: A Complete Protein</div>
+                </div>
+                <div style="background:#fff;border:1px solid var(--border);border-radius:8px;padding:8px">
+                  <div style="font-size:7px;font-weight:700;color:var(--grey);margin-bottom:3px">🧠 MENTAL HEALTH</div>
+                  <div style="font-size:8px;font-weight:700;color:var(--dark)">Managing Exam Stress: 5 Tips</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════
+     STATS TICKER
+══════════════════════════════════════════════════════════════ -->
+<div class="stats-ticker">
+  <div class="container">
+    <div class="ticker-inner">
+      <div class="ticker-item reveal">
+        <div class="ticker-icon">🇮🇳</div>
+        <div>
+          <div class="ticker-num text-blue" data-count="80" data-suffix="Cr+">0</div>
+          <div class="ticker-label">Indians without reliable healthcare access</div>
+        </div>
+      </div>
+      <div class="ticker-item reveal d1">
+        <div class="ticker-icon">💊</div>
+        <div>
+          <div class="ticker-num" style="color:var(--red)" data-count="25" data-suffix="%">0</div>
+          <div class="ticker-label">Medicines in India are counterfeit or fake</div>
+        </div>
+      </div>
+      <div class="ticker-item reveal d2">
+        <div class="ticker-icon">👩‍⚕️</div>
+        <div>
+          <div class="ticker-num" style="color:var(--yellow)" data-count="44" data-suffix="K+">0</div>
+          <div class="ticker-label">Maternal deaths from delayed treatment/year</div>
+        </div>
+      </div>
+      <div class="ticker-item reveal d3">
+        <div class="ticker-icon">🏥</div>
+        <div>
+          <div class="ticker-num text-teal" data-count="70" data-suffix="%">0</div>
+          <div class="ticker-label">Rural India has zero specialist access</div>
+        </div>
+      </div>
+      <div class="ticker-item reveal d4">
+        <div class="ticker-icon">📱</div>
+        <div>
+          <div class="ticker-num text-blue" data-count="60" data-suffix="Cr+">0</div>
+          <div class="ticker-label">Smartphone users with no health app</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════
+     FEATURES
+══════════════════════════════════════════════════════════════ -->
+<section class="section" id="features">
+  <div class="container">
+    <div class="features-intro">
+      <div class="section-label mx-auto"><div class="section-label-dot"></div>8 Core Modules</div>
+      <h2 class="section-title reveal">Everything. In One App.</h2>
+      <p class="section-sub mx-auto reveal">MediLink 2.0 is the only healthcare app in India that covers the complete patient journey — from first symptom to verified recovery.</p>
+    </div>
+    <div class="features-grid">
+
+      <!-- AI Symptom Checker -->
+      <div class="feature-card reveal" style="--fc-from:rgba(26,115,232,0.06);--fc-to:rgba(26,115,232,0.01)">
+        <div class="fc-icon-wrap" style="background:rgba(26,115,232,0.1)">
+          <span style="font-size:26px">🤒</span>
+        </div>
+        <div class="fc-label" style="background:rgba(26,115,232,0.08);color:var(--blue)">Gemini API</div>
+        <div class="fc-title">AI Symptom Checker</div>
+        <div class="fc-desc">Voice-first triage in 8 Indian languages. Get urgency classification and recommended next steps — even without internet.</div>
+        <div class="fc-arrow" style="background:var(--blue-lt)"><span style="color:var(--blue)">→</span></div>
+      </div>
+
+      <!-- AsliDawa -->
+      <div class="feature-card reveal d1" style="--fc-from:rgba(0,200,150,0.07);--fc-to:rgba(52,168,83,0.02);grid-row:span 1">
+        <div style="position:absolute;top:16px;right:16px;background:linear-gradient(135deg,var(--teal),var(--green));color:#fff;font-size:0.6875rem;font-weight:700;padding:3px 8px;border-radius:var(--r-full)">⭐ Innovation</div>
+        <div class="fc-icon-wrap" style="background:rgba(0,200,150,0.12)">
+          <span style="font-size:26px">💊</span>
+        </div>
+        <div class="fc-label" style="background:rgba(0,200,150,0.1);color:var(--teal-dk)">ML Kit + Vision</div>
+        <div class="fc-title" style="color:var(--teal-dk)">AsliDawa™ — Fake Medicine Detector</div>
+        <div class="fc-desc">Scan any medicine barcode in 3 seconds. AI cross-checks CDSCO database and returns <strong>AUTHENTIC</strong>, <strong>SUSPICIOUS</strong>, or <strong>COUNTERFEIT</strong>. India's first.</div>
+        <div class="fc-arrow" style="background:var(--teal-lt)"><span style="color:var(--teal)">→</span></div>
+      </div>
+
+      <!-- Clinic Finder -->
+      <div class="feature-card reveal d2" style="--fc-from:rgba(52,168,83,0.06);--fc-to:rgba(52,168,83,0.01)">
+        <div class="fc-icon-wrap" style="background:rgba(52,168,83,0.1)">
+          <span style="font-size:26px">🏥</span>
+        </div>
+        <div class="fc-label" style="background:rgba(52,168,83,0.08);color:var(--green)">Google Maps API</div>
+        <div class="fc-title">Nearby Affordable Clinics</div>
+        <div class="fc-desc">Instantly find PHCs, government hospitals, and affordable clinics near you. Filter by cost, open status, and specialty.</div>
+        <div class="fc-arrow" style="background:#E6F4EA"><span style="color:var(--green)">→</span></div>
+      </div>
+
+      <!-- Telemedicine -->
+      <div class="feature-card reveal d1" style="--fc-from:rgba(66,133,244,0.06);--fc-to:rgba(66,133,244,0.01)">
+        <div class="fc-icon-wrap" style="background:rgba(66,133,244,0.1)">
+          <span style="font-size:26px">👨‍⚕️</span>
+        </div>
+        <div class="fc-label" style="background:rgba(66,133,244,0.08);color:#4285F4">2G Optimised</div>
+        <div class="fc-title">Telemedicine Consultation</div>
+        <div class="fc-desc">Low-bandwidth text and audio consultations with real doctors. Prescription generation and anonymous consult mode built-in.</div>
+        <div class="fc-arrow" style="background:#EEF2FF"><span style="color:#4285F4">→</span></div>
+      </div>
+
+      <!-- Medicine Reminders -->
+      <div class="feature-card reveal d2" style="--fc-from:rgba(103,58,183,0.06);--fc-to:rgba(103,58,183,0.01)">
+        <div class="fc-icon-wrap" style="background:rgba(103,58,183,0.1)">
+          <span style="font-size:26px">⏰</span>
+        </div>
+        <div class="fc-label" style="background:rgba(103,58,183,0.08);color:#673AB7">Firebase FCM</div>
+        <div class="fc-title">Smart Medicine Reminders</div>
+        <div class="fc-desc">Streak-based medication tracking, missed dose alerts, and family member reminders — with gamified rewards for adherence.</div>
+        <div class="fc-arrow" style="background:#F3E5F5"><span style="color:#673AB7">→</span></div>
+      </div>
+
+      <!-- Emergency SOS -->
+      <div class="feature-card reveal d3" style="--fc-from:rgba(234,67,53,0.06);--fc-to:rgba(234,67,53,0.01)">
+        <div class="fc-icon-wrap" style="background:rgba(234,67,53,0.1)">
+          <span style="font-size:26px">🆘</span>
+        </div>
+        <div class="fc-label" style="background:rgba(234,67,53,0.08);color:var(--red)">Life-Saving</div>
+        <div class="fc-title">One-Tap Emergency SOS</div>
+        <div class="fc-desc">Single tap calls ambulance (108), shares live GPS, sends SMS to emergency contacts, and shows your medical ID to first responders.</div>
+        <div class="fc-arrow" style="background:#FCE8E6"><span style="color:var(--red)">→</span></div>
+      </div>
+
+    </div>
+
+    <!-- Feature highlights bar -->
+    <div style="margin-top:40px;padding:24px 32px;background:linear-gradient(135deg,var(--bg-blue),var(--bg-teal));border-radius:var(--r-2xl);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px" class="reveal">
+      <div style="display:flex;align-items:center;gap:10px">
+        <div style="width:42px;height:42px;background:linear-gradient(135deg,var(--blue),var(--teal));border-radius:12px;display:flex;align-items:center;justify-content:center">
+          <span style="font-size:20px">🏆</span>
+        </div>
+        <div><div style="font-weight:700;font-size:1rem">Community Health Score</div><div style="font-size:0.8125rem;color:var(--grey)">Gamified rewards for healthy behavior</div></div>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px">
+        <div style="width:42px;height:42px;background:linear-gradient(135deg,#673AB7,#E91E63);border-radius:12px;display:flex;align-items:center;justify-content:center">
+          <span style="font-size:20px">📰</span>
+        </div>
+        <div><div style="font-weight:700;font-size:1rem">Health Awareness Feed</div><div style="font-size:0.8125rem;color:var(--grey)">AI-personalized in 8 regional languages</div></div>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px">
+        <div style="width:42px;height:42px;background:linear-gradient(135deg,#0F9D58,#34A853);border-radius:12px;display:flex;align-items:center;justify-content:center">
+          <span style="font-size:20px">🗺️</span>
+        </div>
+        <div><div style="font-weight:700;font-size:1rem">Offline Mode</div><div style="font-size:0.8125rem;color:var(--grey)">Core features work without internet</div></div>
+      </div>
+      <a href="app.html" class="btn btn-primary" style="white-space:nowrap">
+        See All 8 Modules →
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════
+     IMPACT / PROBLEM SECTION
+══════════════════════════════════════════════════════════════ -->
+<section class="impact-section" id="impact">
+  <div class="impact-grid-bg"></div>
+  <div class="container">
+    <div class="impact-inner">
+      <div class="reveal-left">
+        <div class="impact-label-white"><div style="width:6px;height:6px;border-radius:50%;background:var(--teal);display:inline-block;margin-right:4px"></div>The Problem We Solve</div>
+        <h2 class="impact-title">Healthcare Poverty is <span style="background:linear-gradient(135deg,var(--teal),#69D981);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">India's Hidden Crisis</span></h2>
+        <p class="impact-sub">Millions of Indians suffer from preventable diseases simply because they have no access — no information, no doctor, no way to verify their medicines are even real.</p>
+        <div class="sdg-chips">
+          <div class="sdg-chip sdg-3">🌱 SDG Goal 3 — Good Health & Well-Being</div>
+          <div class="sdg-chip sdg-10">⚖️ SDG Goal 10 — Reduced Inequalities</div>
+        </div>
+        <a href="app.html" class="btn btn-white">
+          See How MediLink Helps →
+        </a>
+      </div>
+      <div class="stat-cards reveal-right d1">
+        <div class="stat-card-big">
+          <div class="scb-num" style="background:linear-gradient(135deg,#EA4335,#FF7043);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">80+ Crore</div>
+          <div class="scb-title">Indians Without Adequate Healthcare</div>
+          <div class="scb-source">WHO India Report 2024</div>
+          <div class="scb-bar"><div class="scb-fill" style="width:0%;background:linear-gradient(90deg,#EA4335,#FF7043)" data-width="80"></div></div>
+        </div>
+        <div class="stat-card-big">
+          <div class="scb-num" style="background:linear-gradient(135deg,#FBBC04,#FF9800);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">25% Fake</div>
+          <div class="scb-title">Medicines in India Are Counterfeit or Substandard</div>
+          <div class="scb-source">WHO / CDSCO Data</div>
+          <div class="scb-bar"><div class="scb-fill" style="width:0%;background:linear-gradient(90deg,#FBBC04,#FF9800)" data-width="25"></div></div>
+        </div>
+        <div class="stat-card-big">
+          <div class="scb-num" style="background:linear-gradient(135deg,#34A853,#00C896);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">1:1,511</div>
+          <div class="scb-title">India's Doctor-to-Patient Ratio (WHO Recommends 1:1,000)</div>
+          <div class="scb-source">Ministry of Health India</div>
+          <div class="scb-bar"><div class="scb-fill" style="width:0%;background:linear-gradient(90deg,#34A853,#00C896)" data-width="60"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════
+     LIVE DEMO SECTION
+══════════════════════════════════════════════════════════════ -->
+<section class="section demo-section" id="demo">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:56px">
+      <div class="section-label mx-auto"><div class="section-label-dot"></div>Try It Now</div>
+      <h2 class="section-title reveal">See MediLink in Action</h2>
+      <p class="section-sub mx-auto reveal">Real interactions. Real AI. This is exactly what runs in the app — no smoke and mirrors.</p>
+    </div>
+    <div class="demo-inner">
+      <!-- Left: Text Explanation -->
+      <div class="reveal-left">
+        <div class="demo-tabs" id="demoTabs">
+          <div class="demo-tab active" onclick="switchDemo('symptom',this)">🤒 Symptom Check</div>
+          <div class="demo-tab" onclick="switchDemo('scan',this)">💊 Medicine Scan</div>
+        </div>
+
+        <!-- SYMPTOM DEMO -->
+        <div id="symptomDemo">
+          <h3 style="font-family:'Poppins',sans-serif;font-size:1.375rem;font-weight:700;margin-bottom:10px">AI Symptom Triage</h3>
+          <p style="font-size:0.9375rem;color:var(--grey);margin-bottom:20px;line-height:1.7">Describe your symptoms in plain language. Our AI — powered by <strong>Gemini API</strong> — assesses urgency and guides your next step.</p>
+          <div class="demo-card">
+            <div class="demo-card-header">
+              <div class="demo-win-dots">
+                <div class="demo-dot dd-r"></div><div class="demo-dot dd-y"></div><div class="demo-dot dd-g"></div>
+              </div>
+              <div class="demo-card-title">MediLink — Symptom Checker</div>
+              <div class="demo-ai-badge"><div class="ai-spinner" id="symptomSpinner"></div> Gemini AI</div>
+            </div>
+            <div style="margin-bottom:12px">
+              <div style="font-size:0.8125rem;font-weight:600;color:var(--grey);margin-bottom:8px">Select symptoms (tap to add)</div>
+              <div class="symptom-tags">
+                <span class="stag" onclick="toggleTag(this)">🌡️ Fever</span>
+                <span class="stag" onclick="toggleTag(this)">🤕 Headache</span>
+                <span class="stag" onclick="toggleTag(this)">💢 Body Ache</span>
+                <span class="stag" onclick="toggleTag(this)">😷 Cough</span>
+                <span class="stag" onclick="toggleTag(this)">🤢 Nausea</span>
+                <span class="stag" onclick="toggleTag(this)">😮‍💨 Breathlessness</span>
+                <span class="stag" onclick="toggleTag(this)">💔 Chest Pain</span>
+                <span class="stag" onclick="toggleTag(this)">😴 Fatigue</span>
+              </div>
+            </div>
+            <textarea class="symptom-field" id="symptomField" placeholder="or describe in your own words: 'I have had high fever for 2 days with severe headache...'"></textarea>
+            <button class="analyze-btn" id="analyzeBtn" onclick="analyzeSymptoms()">
+              <span id="analyzeBtnText">Analyze with Gemini AI</span>
+            </button>
+            <div class="urgency-result" id="urgencyResult"></div>
+          </div>
+        </div>
+
+        <!-- SCAN DEMO -->
+        <div id="scanDemo" class="hidden">
+          <h3 style="font-family:'Poppins',sans-serif;font-size:1.375rem;font-weight:700;margin-bottom:10px">AsliDawa™ Verification</h3>
+          <p style="font-size:0.9375rem;color:var(--grey);margin-bottom:20px;line-height:1.7">Select any medicine to simulate a real scan. AsliDawa checks the <strong>CDSCO national drug database</strong> and AI packaging analysis in under 3 seconds.</p>
+          <div class="demo-card">
+            <div class="demo-card-header">
+              <div class="demo-win-dots">
+                <div class="demo-dot dd-r"></div><div class="demo-dot dd-y"></div><div class="demo-dot dd-g"></div>
+              </div>
+              <div class="demo-card-title">AsliDawa™ — Medicine Scanner</div>
+              <div class="demo-ai-badge"><div class="ai-spinner" id="scanSpinner"></div> ML Kit + Vision</div>
+            </div>
+            <div class="scanner-view" id="scannerView">
+              <div class="sv-corners">
+                <div class="svc svc-tl"></div><div class="svc svc-tr"></div>
+                <div class="svc svc-bl"></div><div class="svc svc-br"></div>
+              </div>
+              <div class="sv-beam"></div>
+              <div style="display:flex;flex-direction:column;align-items:center;z-index:1">
+                <div class="sv-barcode"></div>
+                <div class="sv-text">Point camera at medicine barcode<br/>or select a sample below</div>
+              </div>
+            </div>
+            <div class="med-samples">
+              <button class="med-sample-btn" onclick="scanMed('authentic','Paracetamol 500mg','Cipla Ltd','C24A1029')">
+                <div class="ms-pill-icon">💊</div>
+                <div class="ms-info"><div class="ms-name">Paracetamol 500mg</div><div class="ms-brand">Cipla Ltd · Tap to scan</div></div>
+                <div class="ms-badge ms-auth">Authentic</div>
+              </button>
+              <button class="med-sample-btn" onclick="scanMed('suspicious','Amoxicillin 250mg','Sun Pharma (Unverified)','SP23X99')">
+                <div class="ms-pill-icon">💊</div>
+                <div class="ms-info"><div class="ms-name">Amoxicillin 250mg</div><div class="ms-brand">Sun Pharma · Tap to scan</div></div>
+                <div class="ms-badge ms-susp">Suspicious</div>
+              </button>
+              <button class="med-sample-btn" onclick="scanMed('counterfeit','Vitamin-C 500mg','Unknown Brand','VC-XXXXX')">
+                <div class="ms-pill-icon">💊</div>
+                <div class="ms-info"><div class="ms-name">Vitamin-C 500mg</div><div class="ms-brand">Unknown · Tap to scan</div></div>
+                <div class="ms-badge ms-fake">Counterfeit</div>
+              </button>
+            </div>
+            <div class="scan-result-panel" id="scanResultPanel"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: How it works steps -->
+      <div class="reveal-right">
+        <div style="position:sticky;top:100px">
+          <div class="section-label" style="margin-bottom:24px"><div class="section-label-dot"></div>How It Works</div>
+          <div style="display:flex;flex-direction:column;gap:24px">
+            <div style="display:flex;gap:16px;align-items:flex-start">
+              <div style="width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,var(--blue),var(--teal));display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 4px 12px rgba(26,115,232,0.25);color:#fff;font-weight:800;font-size:0.9375rem">1</div>
+              <div><div style="font-weight:700;font-size:0.9375rem;margin-bottom:4px">Enter symptoms or scan medicine</div><div style="font-size:0.875rem;color:var(--grey);line-height:1.6">Supports voice input in Hindi, Bengali, Tamil, Telugu, Marathi, Gujarati, Kannada, and English.</div></div>
+            </div>
+            <div style="display:flex;gap:16px;align-items:flex-start">
+              <div style="width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,var(--teal),var(--green));display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 4px 12px rgba(0,200,150,0.25);color:#fff;font-weight:800;font-size:0.9375rem">2</div>
+              <div><div style="font-weight:700;font-size:0.9375rem;margin-bottom:4px">Gemini AI analyzes in real-time</div><div style="font-size:0.875rem;color:var(--grey);line-height:1.6">For symptoms: urgency classification + possible conditions. For medicine: CDSCO database + visual AI checks.</div></div>
+            </div>
+            <div style="display:flex;gap:16px;align-items:flex-start">
+              <div style="width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,var(--green),#34A853);display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 4px 12px rgba(52,168,83,0.25);color:#fff;font-weight:800;font-size:0.9375rem">3</div>
+              <div><div style="font-weight:700;font-size:0.9375rem;margin-bottom:4px">Get actionable guidance instantly</div><div style="font-size:0.875rem;color:var(--grey);line-height:1.6">Specific next steps, nearest clinic, doctor consult link, or medicine safety alert — all in one screen.</div></div>
+            </div>
+            <div style="display:flex;gap:16px;align-items:flex-start">
+              <div style="width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,#4285F4,#3367D6);display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 4px 12px rgba(66,133,244,0.25);color:#fff;font-weight:800;font-size:0.9375rem">4</div>
+              <div><div style="font-weight:700;font-size:0.9375rem;margin-bottom:4px">Track recovery and earn points</div><div style="font-size:0.875rem;color:var(--grey);line-height:1.6">Medicine reminders, health score gamification, and community leaderboard to reinforce healthy habits.</div></div>
+            </div>
+          </div>
+          <div style="margin-top:32px;padding:20px;background:linear-gradient(135deg,var(--bg-blue),var(--bg-teal));border-radius:var(--r-xl)">
+            <div style="font-weight:700;font-size:0.9375rem;margin-bottom:8px">💡 The On-Stage Demo Moment</div>
+            <div style="font-size:0.875rem;color:var(--grey);line-height:1.6">Scan a real medicine on stage → <strong style="color:var(--teal-dk)">AUTHENTIC</strong> appears in 3 seconds. That's the hook judges remember.</div>
+          </div>
+          <div style="margin-top:16px">
+            <a href="app.html" class="btn btn-primary" style="width:100%;justify-content:center">
+              Try the Full App →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════
+     USER STORY
+══════════════════════════════════════════════════════════════ -->
+<section class="story-section" id="story">
+  <div class="container">
+    <div class="story-inner">
+      <div class="reveal-left">
+        <div class="section-label" style="margin-bottom:20px"><div class="section-label-dot"></div>Real User Story</div>
+        <div class="story-persona">
+          <div class="persona-avatar">👨‍🌾</div>
+          <div class="persona-info">
+            <div class="persona-name">Ramu, 45 years old</div>
+            <div class="persona-desc">Farmer · Khunti, Jharkhand · Class 8 pass · Feature phone</div>
+          </div>
+        </div>
+        <h2 class="story-title">A Farmer's Fever Changed <span class="text-blue">How We Think About Healthcare</span></h2>
+        <div class="story-quote">"I had fever for three days. The doctor is 40 km away. I thought it will go away. It didn't."</div>
+        <div class="story-steps">
+          <div class="sstep">
+            <div class="sstep-num">1</div>
+            <div class="sstep-content"><div class="sstep-title">Ramu opens MediLink</div><div class="sstep-desc">Selects Hindi, taps the mic icon, says "बुखार है, सिर दर्द है" (I have fever and headache).</div></div>
+          </div>
+          <div class="sstep">
+            <div class="sstep-num">2</div>
+            <div class="sstep-content"><div class="sstep-title">Gemini AI classifies urgency</div><div class="sstep-desc">Returns: <strong>MODERATE RISK</strong> — possible dengue, visit PHC within 24 hours. In plain Hindi.</div></div>
+          </div>
+          <div class="sstep">
+            <div class="sstep-num">3</div>
+            <div class="sstep-content"><div class="sstep-title">Finds nearest PHC</div><div class="sstep-desc">MediLink shows Ranchi PHC — 6km away, free, open today. One-tap directions.</div></div>
+          </div>
+          <div class="sstep">
+            <div class="sstep-num">4</div>
+            <div class="sstep-content"><div class="sstep-title">Scans prescribed medicine</div><div class="sstep-desc">Pharmacist gives him "Paracetamol". AsliDawa scan: <strong style="color:var(--teal-dk)">✓ AUTHENTIC</strong>. Ramu takes it safely.</div></div>
+          </div>
+          <div class="sstep">
+            <div class="sstep-num">5</div>
+            <div class="sstep-content"><div class="sstep-title">Medicine reminder set</div><div class="sstep-desc">MediLink alerts him daily. He completes the course. Recovers fully. Earns +50 Health Points.</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="story-visual reveal-right">
+        <div class="story-phone-wrap">
+          <!-- Story phone mockup -->
+          <div class="story-phone">
+            <div class="phone-frame" style="border-radius:36px;width:210px">
+              <div class="phone-notch"></div>
+              <div class="phone-screen" style="background:#F8F9FA;padding:12px 10px;gap:8px;min-height:380px">
+                <!-- Hindi interface -->
+                <div style="background:#fff;border-radius:10px;padding:10px;box-shadow:var(--shadow-sm);border-left:3px solid var(--blue)">
+                  <div style="font-size:7px;font-weight:600;color:var(--blue);margin-bottom:4px">🎙️ Voice Input (हिंदी)</div>
+                  <div style="font-size:9px;color:var(--dark);font-weight:600">"बुखार है, सिर दर्द है"</div>
+                  <div style="font-size:7.5px;color:var(--grey);margin-top:2px">Fever + Headache detected</div>
+                </div>
+                <div style="background:linear-gradient(135deg,rgba(251,188,4,0.12),rgba(251,188,4,0.06));border:1px solid rgba(251,188,4,0.35);border-radius:10px;padding:10px">
+                  <div style="font-size:8px;font-weight:900;color:#E65100;letter-spacing:0.03em;margin-bottom:4px">⚠️ मध्यम जोखिम (MODERATE RISK)</div>
+                  <div style="font-size:7.5px;color:var(--grey);line-height:1.5">संभावित डेंगू। 24 घंटे के भीतर PHC जाएं।</div>
+                </div>
+                <div style="background:#fff;border-radius:10px;padding:10px;box-shadow:var(--shadow-sm);display:flex;gap:7px;align-items:center">
+                  <div style="font-size:14px">🏥</div>
+                  <div style="flex:1">
+                    <div style="font-size:8px;font-weight:700">Ranchi PHC</div>
+                    <div style="font-size:7px;color:var(--grey)">6km · खुला · मुफ्त</div>
+                  </div>
+                  <div style="font-size:7px;font-weight:700;color:#fff;background:var(--green);padding:3px 6px;border-radius:4px">दिशा</div>
+                </div>
+                <div style="background:rgba(0,200,150,0.08);border:1px solid rgba(0,200,150,0.3);border-radius:10px;padding:10px;display:flex;align-items:center;gap:7px">
+                  <div style="width:22px;height:22px;background:var(--teal);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;color:#fff;float:left;flex-shrink:0">✓</div>
+                  <div>
+                    <div style="font-size:8px;font-weight:900;color:var(--teal-dk)">✅ AUTHENTIC · असली दवा</div>
+                    <div style="font-size:7px;color:var(--grey)">Paracetamol · Cipla · Verified</div>
+                  </div>
+                </div>
+                <div style="background:linear-gradient(135deg,var(--blue),var(--teal));border-radius:10px;padding:10px;display:flex;align-items:center;justify-content:center;gap:6px">
+                  <span style="font-size:12px">🏆</span>
+                  <div style="font-size:8px;font-weight:800;color:#fff">Ramu earned +50 Health Points!</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Floating badges -->
+          <div class="story-badge sb-1">
+            <span class="sb-icon">🎙️</span>
+            <div>
+              <div style="font-weight:700;font-size:0.8125rem">Hindi Voice Input</div>
+              <div style="font-size:0.75rem;color:var(--grey)">Works on 2G</div>
+            </div>
+          </div>
+          <div class="story-badge sb-2">
+            <span class="sb-icon">✅</span>
+            <div>
+              <div style="font-weight:700;font-size:0.8125rem;color:var(--teal-dk)">Medicine: AUTHENTIC</div>
+              <div style="font-size:0.75rem;color:var(--grey)">3 seconds · AI verified</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════
+     TECH STACK
+══════════════════════════════════════════════════════════════ -->
+<section class="section tech-section" id="tech">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:16px">
+      <div class="section-label mx-auto" style="justify-content:center"><div class="section-label-dot"></div>Powered By Google</div>
+      <h2 class="section-title reveal">Built on Google's <span class="text-blue">Best-in-Class</span> APIs</h2>
+      <p class="section-sub mx-auto reveal">Every module of MediLink 2.0 is deeply integrated with Google's enterprise-grade AI and infrastructure stack.</p>
+    </div>
+    <div class="tech-grid">
+      <div class="tech-card reveal">
+        <div class="tech-icon-wrap tc-blue"><span style="font-size:22px">🧠</span></div>
+        <div><div class="tech-name">Gemini API</div><div class="tech-role">AI symptom analysis, medicine text extraction, health content generation in 8 languages</div></div>
+      </div>
+      <div class="tech-card reveal d1">
+        <div class="tech-icon-wrap tc-teal"><span style="font-size:22px">👁️</span></div>
+        <div><div class="tech-name">Gemini Vision + ML Kit</div><div class="tech-role">Medicine packaging analysis, barcode scanning, counterfeit detection via camera</div></div>
+      </div>
+      <div class="tech-card reveal d2">
+        <div class="tech-icon-wrap tc-green"><span style="font-size:22px">🗺️</span></div>
+        <div><div class="tech-name">Google Maps SDK</div><div class="tech-role">Real-time nearby clinic finder, directions, GPS location sharing for SOS</div></div>
+      </div>
+      <div class="tech-card reveal d1">
+        <div class="tech-icon-wrap tc-red"><span style="font-size:22px">🔥</span></div>
+        <div><div class="tech-name">Firebase Suite</div><div class="tech-role">Auth, Firestore, Cloud Functions, Realtime DB, Cloud Storage, Remote Config</div></div>
+      </div>
+      <div class="tech-card reveal d2">
+        <div class="tech-icon-wrap tc-yellow"><span style="font-size:22px">🔔</span></div>
+        <div><div class="tech-name">Firebase Cloud Messaging</div><div class="tech-role">Medicine reminders, health alerts, emergency notifications — even in background</div></div>
+      </div>
+      <div class="tech-card reveal d3">
+        <div class="tech-icon-wrap tc-purple"><span style="font-size:22px">🎙️</span></div>
+        <div><div class="tech-name">Speech-to-Text + Translation API</div><div class="tech-role">Voice symptom input and real-time translation across 8 Indian regional languages</div></div>
+      </div>
+    </div>
+
+    <!-- Architecture note -->
+    <div style="margin-top:32px;padding:28px 32px;background:linear-gradient(135deg,#0A1628,#1A3A5C);border-radius:var(--r-2xl);display:flex;align-items:center;gap:24px;flex-wrap:wrap" class="reveal">
+      <div style="flex:1;min-width:200px">
+        <div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:1.0625rem;color:#fff;margin-bottom:6px">Tech Stack at a Glance</div>
+        <div style="font-size:0.875rem;color:rgba(255,255,255,0.55);line-height:1.65">Flutter · Firebase · Gemini API · ML Kit · Google Maps · Speech-to-Text · Cloud Translation · WebRTC · Hive (Offline)</div>
+      </div>
+      <div style="display:flex;gap:16px;flex-wrap:wrap">
+        <div style="text-align:center;padding:14px 20px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:var(--r-lg)">
+          <div style="font-family:'Poppins',sans-serif;font-weight:800;font-size:1.5rem;color:var(--teal)">100%</div>
+          <div style="font-size:0.8rem;color:rgba(255,255,255,0.5);margin-top:2px">Google Stack</div>
+        </div>
+        <div style="text-align:center;padding:14px 20px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:var(--r-lg)">
+          <div style="font-family:'Poppins',sans-serif;font-weight:800;font-size:1.5rem;color:#FBBC04">&lt;30MB</div>
+          <div style="font-size:0.8rem;color:rgba(255,255,255,0.5);margin-top:2px">APK Size</div>
+        </div>
+        <div style="text-align:center;padding:14px 20px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:var(--r-lg)">
+          <div style="font-family:'Poppins',sans-serif;font-weight:800;font-size:1.5rem;color:#EA4335">2G</div>
+          <div style="font-size:0.8rem;color:rgba(255,255,255,0.5);margin-top:2px">Ready</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════
+     WHY WE WIN
+══════════════════════════════════════════════════════════════ -->
+<section class="section win-section">
+  <div class="container">
+    <div class="win-inner">
+      <div class="reveal-left">
+        <div class="section-label" style="margin-bottom:20px"><div class="section-label-dot"></div>Competitive Advantage</div>
+        <h2 class="section-title">Why MediLink <span class="text-blue">Wins</span></h2>
+        <p style="font-size:1rem;color:var(--grey);line-height:1.75;margin-bottom:32px">No existing app combines medicine verification, rural usability, multi-language AI, and emergency SOS in a single, offline-capable product.</p>
+        <div class="win-pillar">
+          <div class="wp-icon" style="background:rgba(0,200,150,0.1)"><span style="font-size:20px">💊</span></div>
+          <div><div class="wp-title">First medicine verifier in India</div><div class="wp-desc">AsliDawa is the only consumer-facing AI tool that checks medicine authenticity in real-time. No competitor offers this.</div></div>
+        </div>
+        <div class="win-pillar">
+          <div class="wp-icon" style="background:rgba(26,115,232,0.1)"><span style="font-size:20px">📡</span></div>
+          <div><div class="wp-title">Works on 2G — truly rural</div><div class="wp-desc">Core features (symptom check, SOS, reminders) work offline. App size under 30MB. Android 7.0+ supported.</div></div>
+        </div>
+        <div class="win-pillar">
+          <div class="wp-icon" style="background:rgba(52,168,83,0.1)"><span style="font-size:20px">🌍</span></div>
+          <div><div class="wp-title">8 Indian languages — voice-first</div><div class="wp-desc">Hindi, Bengali, Tamil, Telugu, Marathi, Gujarati, Kannada, and English. Voice input at every step.</div></div>
+        </div>
+        <div class="win-pillar">
+          <div class="wp-icon" style="background:rgba(234,67,53,0.1)"><span style="font-size:20px">🔄</span></div>
+          <div><div class="wp-title">End-to-end healthcare journey</div><div class="wp-desc">Symptom → Clinic → Doctor → Medicine → Reminder → Recovery. No other app covers the full flow.</div></div>
+        </div>
+      </div>
+
+      <div class="reveal-right d1">
+        <div class="section-label" style="margin-bottom:16px"><div class="section-label-dot"></div>vs. Competition</div>
+        <div class="comparison-table">
+          <div class="ct-header">
+            <div class="ct-hcell" style="text-align:left">Feature</div>
+            <div class="ct-hcell us">MediLink</div>
+            <div class="ct-hcell">Practo</div>
+            <div class="ct-hcell">mFine</div>
+            <div class="ct-hcell">PharmEasy</div>
+          </div>
+          <div class="ct-row"><div class="ct-cell feat">Medicine Verification</div><div class="ct-cell us-cell text-teal icon-check">✓</div><div class="ct-cell icon-cross">✗</div><div class="ct-cell icon-cross">✗</div><div class="ct-cell icon-cross">✗</div></div>
+          <div class="ct-row"><div class="ct-cell feat">8+ Indian Languages</div><div class="ct-cell us-cell text-teal icon-check">✓</div><div class="ct-cell icon-cross">✗</div><div class="ct-cell icon-cross">✗</div><div class="ct-cell icon-part">Partial</div></div>
+          <div class="ct-row"><div class="ct-cell feat">Works on 2G / Offline</div><div class="ct-cell us-cell text-teal icon-check">✓</div><div class="ct-cell icon-cross">✗</div><div class="ct-cell icon-cross">✗</div><div class="ct-cell icon-cross">✗</div></div>
+          <div class="ct-row"><div class="ct-cell feat">Emergency SOS</div><div class="ct-cell us-cell text-teal icon-check">✓</div><div class="ct-cell icon-cross">✗</div><div class="ct-cell icon-cross">✗</div><div class="ct-cell icon-cross">✗</div></div>
+          <div class="ct-row"><div class="ct-cell feat">Free for Rural Users</div><div class="ct-cell us-cell text-teal icon-check">✓</div><div class="ct-cell icon-cross">✗</div><div class="ct-cell icon-cross">✗</div><div class="ct-cell icon-cross">✗</div></div>
+          <div class="ct-row"><div class="ct-cell feat">Gamified Health Score</div><div class="ct-cell us-cell text-teal icon-check">✓</div><div class="ct-cell icon-cross">✗</div><div class="ct-cell icon-part">Partial</div><div class="ct-cell icon-cross">✗</div></div>
+          <div class="ct-row"><div class="ct-cell feat">AI Symptom Triage</div><div class="ct-cell us-cell text-teal icon-check">✓</div><div class="ct-cell icon-part">Partial</div><div class="ct-cell icon-check text-green">✓</div><div class="ct-cell icon-cross">✗</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════
+     FINAL CTA
+══════════════════════════════════════════════════════════════ -->
+<section class="final-cta" id="cta">
+  <div class="fc-bg-1"></div>
+  <div class="fc-bg-2"></div>
+  <div class="container" style="position:relative;z-index:1">
+    <div class="fc-eyebrow">🚀 Google Solution Challenge 2026</div>
+    <h2 class="fc-title reveal">Join the <span style="background:linear-gradient(135deg,var(--teal),#69D981);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Healthcare Revolution</span></h2>
+    <p class="fc-sub reveal d1">Built for India's 80 crore unheard — the ones who can't afford to get it wrong. One app. Eight modules. Complete healthcare, in your pocket.</p>
+    <div class="fc-btns reveal d2">
+      <a href="app.html" class="btn btn-white btn-lg">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        Try the Live Demo
+      </a>
+      <a href="#demo" class="btn btn-lg" style="background:rgba(255,255,255,0.12);color:#fff;border:1.5px solid rgba(255,255,255,0.25)">
+        💊 Scan a Medicine Now
+      </a>
+    </div>
+    <div class="fc-trust-row reveal d3">
+      <div class="fc-trust-item"><div class="fc-trust-icon">✅</div>Gemini API Integrated</div>
+      <div class="fc-trust-item"><div class="fc-trust-icon">🔥</div>Firebase Powered</div>
+      <div class="fc-trust-item"><div class="fc-trust-icon">🗺️</div>Google Maps SDK</div>
+      <div class="fc-trust-item"><div class="fc-trust-icon">🌍</div>SDG 3 + SDG 10</div>
+      <div class="fc-trust-item"><div class="fc-trust-icon">🇮🇳</div>Built for Bharat</div>
+    </div>
+
+    <!-- Team credit -->
+    <div style="margin-top:64px;padding-top:40px;border-top:1px solid rgba(255,255,255,0.08);text-align:center">
+      <div style="font-size:0.875rem;color:rgba(255,255,255,0.4)">
+        Crafted by <strong style="color:rgba(255,255,255,0.7)">Sourav Sarkar</strong> ·
+        JIS College of Engineering, Kalyani ·
+        Google Solution Challenge 2026 | Build with AI | Hack2Skill
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════════════════════════ -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="nav-logo" style="margin-bottom:12px">
+          <div class="logo-mark"><svg viewBox="0 0 20 20" fill="none"><path d="M10 3v14M3 10h14" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg></div>
+          <span class="logo-name">Medi<span>Link</span> 2.0</span>
+        </div>
+        <div class="footer-tagline">India's first end-to-end AI healthcare companion. From first symptom to verified recovery — built for Bharat.</div>
+        <div style="margin-top:14px;display:flex;gap:8px;flex-wrap:wrap">
+          <span class="footer-badge">🏥 SDG 3</span>
+          <span class="footer-badge">⚖️ SDG 10</span>
+          <span class="footer-badge">🇮🇳 Built for Rural India</span>
+        </div>
+      </div>
+      <div class="footer-cols">
+        <div>
+          <div class="footer-col-title">Modules</div>
+          <div class="footer-links">
+            <a href="app.html" class="footer-link">AI Symptom Checker</a>
+            <a href="app.html" class="footer-link">AsliDawa™ Scanner</a>
+            <a href="app.html" class="footer-link">Nearby Clinic Finder</a>
+            <a href="app.html" class="footer-link">Telemedicine</a>
+            <a href="app.html" class="footer-link">Medicine Reminders</a>
+            <a href="app.html" class="footer-link">Emergency SOS</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-title">Project</div>
+          <div class="footer-links">
+            <a href="#impact" class="footer-link">Impact & Stats</a>
+            <a href="#tech" class="footer-link">Tech Stack</a>
+            <a href="#story" class="footer-link">User Stories</a>
+            <a href="#demo" class="footer-link">Live Demo</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-title">Technology</div>
+          <div class="footer-links">
+            <a href="#" class="footer-link">Gemini API</a>
+            <a href="#" class="footer-link">Firebase</a>
+            <a href="#" class="footer-link">Google Maps SDK</a>
+            <a href="#" class="footer-link">ML Kit + Vision</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 MediLink 2.0 · Sourav Sarkar · JIS College of Engineering, Kalyani</div>
+      <div class="footer-badges">
+        <span class="footer-badge">🤖 AI-Powered</span>
+        <span class="footer-badge">🔒 Privacy First</span>
+        <span class="footer-badge">📡 2G Ready</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ══════════════════════════════════════════════════════════════
+     JAVASCRIPT
+══════════════════════════════════════════════════════════════ -->
+<script>
+// ── NAV ──────────────────────────────────────────────────────
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 40);
+});
+
+document.getElementById('hamburger').addEventListener('click', () => {
+  document.getElementById('mobileDrawer').classList.add('open');
+});
+function closeDrawer(e) {
+  if (e.target === e.currentTarget) closeMenu();
+}
+function closeMenu() {
+  document.getElementById('mobileDrawer').classList.remove('open');
+}
+
+// ── SMOOTH SCROLL FOR CTA BUTTONS ────────────────────────────
+document.getElementById('heroScanBtn').addEventListener('click', () => {
+  document.getElementById('demo').scrollIntoView({ behavior: 'smooth' });
+  setTimeout(() => switchDemo('scan', document.querySelectorAll('.demo-tab')[1]), 600);
+});
+
+// ── SCROLL REVEAL ─────────────────────────────────────────────
+const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      io.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.12 });
+revealEls.forEach(el => io.observe(el));
+
+// ── COUNTER ANIMATION ─────────────────────────────────────────
+function animateCounter(el) {
+  const target = parseInt(el.dataset.count);
+  const suffix = el.dataset.suffix || '';
+  let cur = 0;
+  const step = target / 50;
+  const timer = setInterval(() => {
+    cur = Math.min(cur + step, target);
+    el.textContent = Math.floor(cur) + suffix;
+    if (cur >= target) clearInterval(timer);
+  }, 30);
+}
+
+const counterIO = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      animateCounter(e.target);
+      counterIO.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.8 });
+document.querySelectorAll('[data-count]').forEach(el => counterIO.observe(el));
+
+// ── STAT BAR ANIMATION ────────────────────────────────────────
+const barIO = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      const fill = e.target;
+      const width = fill.dataset.width;
+      setTimeout(() => fill.style.width = width + '%', 300);
+      barIO.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.5 });
+document.querySelectorAll('.scb-fill').forEach(el => barIO.observe(el));
+
+// ── DEMO TABS ─────────────────────────────────────────────────
+const hidden = 'display:none';
+function switchDemo(mode, btn) {
+  document.querySelectorAll('.demo-tab').forEach(t => t.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('symptomDemo').style.display = mode === 'symptom' ? '' : 'none';
+  document.getElementById('scanDemo').style.display = mode === 'scan' ? '' : 'none';
+}
+
+// ── SYMPTOM CHECKER ───────────────────────────────────────────
+function toggleTag(el) {
+  el.classList.toggle('sel');
+  const tags = [...document.querySelectorAll('.stag.sel')].map(t => t.textContent.replace(/^[^\s]+\s/,''));
+  document.getElementById('symptomField').value = tags.join(', ');
+}
+
+const symptomResults = {
+  default: {
+    cls: 'ur-moderate', icon: '⚠️', level: 'MODERATE RISK', color: '#E65100',
+    desc: 'Medical attention recommended within 24 hours. Monitor for worsening symptoms.',
+    steps: [
+      'Stay hydrated — drink 3L of water and ORS daily',
+      'Take Paracetamol 500mg for fever (avoid Aspirin until dengue ruled out)',
+      'Visit nearest PHC if fever exceeds 104°F or worsens',
+    ]
+  },
+  chest: {
+    cls: 'ur-high', icon: '🚨', level: 'CRITICAL — SEEK EMERGENCY CARE NOW', color: '#EA4335',
+    desc: 'Chest pain is a medical emergency. Call 108 immediately.',
+    steps: [
+      '📞 Call 108 — Ambulance Service immediately',
+      '🚫 Do NOT eat or drink anything',
+      '🧘 Sit or lie in a comfortable position and stay calm',
+    ]
+  },
+  cough: {
+    cls: 'ur-low', icon: '✅', level: 'LOW RISK — Home Care Sufficient', color: '#0F9D58',
+    desc: 'Symptoms suggest a mild viral infection. No immediate care needed.',
+    steps: [
+      '🍯 Honey + warm ginger tea for throat relief',
+      '💊 OTC antihistamine if needed — no antibiotics without prescription',
+      '😷 Mask up around others to avoid spreading infection',
+    ]
+  }
+};
+
+let analyzing = false;
+function analyzeSymptoms() {
+  if (analyzing) return;
+  const input = (document.getElementById('symptomField').value || '').toLowerCase();
+  if (!input.trim()) {
+    document.getElementById('symptomField').style.borderColor = 'var(--red)';
+    setTimeout(() => document.getElementById('symptomField').style.borderColor = '', 2000);
+    return;
+  }
+  analyzing = true;
+
+  const btn = document.getElementById('analyzeBtnText');
+  const spinner = document.getElementById('symptomSpinner');
+  btn.textContent = 'Analyzing…';
+  spinner.classList.add('active');
+  document.getElementById('urgencyResult').style.display = 'none';
+
+  let data;
+  if (input.includes('chest') || input.includes('chest pain')) data = symptomResults.chest;
+  else if (input.includes('cough') || input.includes('throat') || input.includes('cold')) data = symptomResults.cough;
+  else data = symptomResults.default;
+
+  setTimeout(() => {
+    analyzing = false;
+    btn.textContent = 'Analyze with Gemini AI';
+    spinner.classList.remove('active');
+
+    const el = document.getElementById('urgencyResult');
+    el.className = `urgency-result ${data.cls}`;
+    el.innerHTML = `
+      <div class="ur-header">
+        <div class="ur-icon">${data.icon}</div>
+        <div class="ur-level" style="color:${data.color}">${data.level}</div>
+      </div>
+      <div class="ur-desc">${data.desc}</div>
+      <div class="ur-steps">
+        ${data.steps.map((s,i) => `
+          <div class="ur-step">
+            <div class="ur-step-num">${i+1}</div>
+            <span style="font-size:0.8125rem">${s}</span>
+          </div>
+        `).join('')}
+      </div>
+    `;
+    el.style.display = 'block';
+    el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }, 2200);
+}
+
+document.getElementById('symptomField').addEventListener('keydown', e => {
+  if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); analyzeSymptoms(); }
+});
+
+// ── MEDICINE SCANNER ──────────────────────────────────────────
+let scanning = false;
+function scanMed(type, name, brand, batch) {
+  if (scanning) return;
+  scanning = true;
+
+  const sv = document.getElementById('scannerView');
+  const spinner = document.getElementById('scanSpinner');
+  spinner.classList.add('active');
+  document.getElementById('scanResultPanel').style.display = 'none';
+
+  // Animate scanner
+  sv.style.borderColor = 'var(--teal)';
+  sv.style.boxShadow = '0 0 30px rgba(0,200,150,0.2)';
+
+  const steps = [
+    [400, 'Reading barcode…'],
+    [900, 'Querying CDSCO database…'],
+    [1500, 'Running AI packaging check…'],
+    [2000, 'Generating report…'],
+  ];
+  const svText = sv.querySelector('.sv-text');
+  steps.forEach(([delay, text]) => setTimeout(() => { if (svText) svText.textContent = text; }, delay));
+
+  setTimeout(() => {
+    scanning = false;
+    spinner.classList.remove('active');
+    sv.style.borderColor = '';
+    sv.style.boxShadow = '';
+
+    const configs = {
+      authentic: {
+        cls: 'srp-authentic', bgCls: 'srp-auth-bg', txtCls: 'srp-auth-text',
+        icon: '✓', status: 'AUTHENTIC',
+        checks: [
+          { pass: true, label: 'Barcode matches CDSCO national database' },
+          { pass: true, label: `Batch ${batch} verified as genuine` },
+          { pass: true, label: `${brand} — licensed manufacturer confirmed` },
+          { pass: true, label: 'Expiry date within valid range' },
+          { pass: true, label: 'No packaging inconsistencies detected' },
+        ]
+      },
+      suspicious: {
+        cls: 'srp-suspicious', bgCls: 'srp-susp-bg', txtCls: 'srp-susp-text',
+        icon: '⚠', status: 'SUSPICIOUS',
+        checks: [
+          { pass: false, label: 'Batch SP23X99 NOT found in CDSCO data' },
+          { pass: false, label: 'EXPIRED — product past expiry date' },
+          { warn: true, label: 'Manufacturer name format inconsistent' },
+          { warn: true, label: 'Packaging print quality below standard' },
+          { pass: false, label: 'Hologram seal not detected' },
+        ]
+      },
+      counterfeit: {
+        cls: 'srp-counterfeit', bgCls: 'srp-fake-bg', txtCls: 'srp-fake-text',
+        icon: '✕', status: 'COUNTERFEIT',
+        checks: [
+          { pass: false, label: 'Barcode not found in any database' },
+          { pass: false, label: 'Manufacturer not registered with CDSCO' },
+          { pass: false, label: 'No valid license number on packaging' },
+          { pass: false, label: 'No manufacturing date or batch code' },
+          { pass: false, label: 'Multiple packaging inconsistencies detected' },
+        ]
+      }
+    };
+
+    const cfg = configs[type];
+    const panel = document.getElementById('scanResultPanel');
+    panel.className = `scan-result-panel ${cfg.cls}`;
+    panel.innerHTML = `
+      <div class="srp-header">
+        <div class="srp-badge ${cfg.bgCls}" style="font-size:1.25rem;font-weight:900;color:${type==='authentic'?'var(--teal-dk)':type==='suspicious'?'#E65100':'var(--red)'}">${cfg.icon}</div>
+        <div>
+          <div class="srp-status ${cfg.txtCls}">${cfg.status}</div>
+          <div style="font-size:0.875rem;font-weight:600;color:var(--dark);margin-top:2px">${name}</div>
+          <div style="font-size:0.8125rem;color:var(--grey)">${brand} · Batch: ${batch}</div>
+        </div>
+      </div>
+      <div class="srp-checks">
+        ${cfg.checks.map(c => `
+          <div class="srp-check-item">
+            <div class="srp-chk-icon ${c.pass?'chk-pass':c.warn?'chk-warn':'chk-fail'}">${c.pass?'✓':c.warn?'!':'✕'}</div>
+            <span style="color:var(--${c.pass?'green':c.warn?'yellow':'red'})">${c.label}</span>
+          </div>
+        `).join('')}
+      </div>
+      ${type==='counterfeit'?'<div style="margin-top:12px;padding:10px;background:rgba(234,67,53,0.06);border-radius:8px;font-size:0.8rem;color:var(--red);font-weight:600">⚠️ Do NOT consume. Discard safely. Report to your pharmacist.</div>':''}
+    `;
+    panel.style.display = 'block';
+
+    if (svText) svText.textContent = type === 'authentic' ? '✓ Verification complete' : '⚠ Issues detected — see report';
+    sv.style.borderColor = type === 'authentic' ? 'var(--teal)' : type === 'suspicious' ? '#FBBC04' : 'var(--red)';
+    panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }, 2500);
+}
+
+// ── ACTIVE NAV LINK ───────────────────────────────────────────
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-link');
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(s => { if (window.scrollY >= s.offsetTop - 120) current = s.id; });
+  navLinks.forEach(l => {
+    l.style.color = '';
+    if (l.getAttribute('href') === `#${current}`) l.style.color = 'var(--blue)';
+  });
+}, { passive: true });
+</script>
+</body>
+</html>
