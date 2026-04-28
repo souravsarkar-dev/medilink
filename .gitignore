@@ -1,0 +1,21 @@
+# Node modules
+node_modules/
+npm-debug.log*
+
+# Firebase
+.firebase/
+firebase-debug.log
+firestore-debug.log
+database-debug.log
+
+# Environment / secrets - DO NOT PUSH
+# js/env-config.js  <-- Keep this commented if you want to push env-config with keys
+# Uncomment above if you want to protect your API keys
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+*.swp
