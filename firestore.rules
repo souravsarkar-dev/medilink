@@ -1,0 +1,54 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Users: only the user can read/write their own document
+    match /users/{userId} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+      
+      // Sub-collections: symptom history, scans, reminders, actions
+      match /{subcollection}/{docId} {
+        allow read, write: if request.auth != null && request.auth.uid == userId;
+      }
+    }
+    
+    // Global scans: users can write their own, read all
+    match /scans/{scanId} {
+      allow read: if request.auth != null;
+      allow create: if request.auth != null && request.resource.data.userId == request.auth.uid;
+      allow update: if request.auth != null && resource.data.userId == request.auth.uid;
+    }
+    
+    // Fake reports: authenticated users can create, read
+    match /fakeReports/{reportId} {
+      allow read: if request.auth != null;
+      allow create: if request.auth != null;
+    }
+    
+    // Health articles: public read, no write from client
+    match /healthArticles/{articleId} {
+      allow read: if true; // Public
+      allow write: if false; // Cloud Functions only
+    }
+    
+    // Medicines database: public read
+    match /medicines/{medicineId} {
+      allow read: if true;
+      allow write: if false;
+    }
+    
+    // Consultations: patients and doctors only
+    match /consultations/{consultationId} {
+      allow read, write: if request.auth != null &&
+        (resource.data.patientId == request.auth.uid || 
+         resource.data.doctorId == request.auth.uid);
+      allow create: if request.auth != null;
+    }
+    
+    // Community leaderboard: public read
+    match /community/{docId} {
+      allow read: if true;
+      allow write: if false;
+    }
+  }
+}
