@@ -1,0 +1,28 @@
+{
+  "name": "medilink-2-0",
+  "version": "2.0.0",
+  "description": "MediLink 2.0 — AI-powered Healthcare Companion for underserved communities | Google Solution Challenge 2026",
+  "author": "Sourav Sarkar <JIS College of Engineering, Kalyani>",
+  "license": "MIT",
+  "keywords": ["healthcare", "AI", "gemini", "firebase", "india", "medilink"],
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve . -p 5500",
+    "dev": "npx serve . -p 5500 --cors",
+    "deploy": "firebase deploy",
+    "deploy:hosting": "firebase deploy --only hosting",
+    "firebase:init": "firebase init"
+  },
+  "dependencies": {
+    "@firebase/analytics": "^0.10.21",
+    "@firebase/app": "^0.14.11",
+    "@firebase/auth": "^1.13.0",
+    "@firebase/firestore": "^4.14.0",
+    "@firebase/functions": "^0.13.3",
+    "@firebase/messaging": "^0.12.25",
+    "@firebase/storage": "^0.14.2",
+    "firebase": "^12.12.1"
+  },
+  "devDependencies": {}
+}
+
