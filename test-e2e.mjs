@@ -1,5 +1,8 @@
 // End-to-end test of the EXACT code path used in the webapp
-const GEMINI_API_KEY = '';
+const GEMINI_API_KEY = process.env.GEMINI_API_KEY || '';
+if (!GEMINI_API_KEY) {
+  throw new Error('Missing GEMINI_API_KEY. Set it before running this script.');
+}
 const GEMINI_MODEL = 'gemini-2.5-flash';
 const GEMINI_BASE_URL = 'https://generativelanguage.googleapis.com/v1beta/models';
 
