@@ -1,4 +1,4 @@
-const key = "AIzaSyBhJAWtw1UIPB0fE9tgATQdb73wetKldSA";
+const key = "";
 const model = "gemini-1.5-flash";
 const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${key}`;
 

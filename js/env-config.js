@@ -5,14 +5,14 @@
 
 const ENV = {
   // ── Gemini API (AI Symptom Checker) ──────────────────────────────
-  GEMINI_API_KEY: 'AIzaSyBhJAWtw1UIPB0fE9tgATQdb73wetKldSA',
+  GEMINI_API_KEY: '',
   GEMINI_MODEL: 'gemini-2.0-flash',
 
   // ── Google Maps API (Clinic Finder) ──────────────────────────────
-  GOOGLE_MAPS_API_KEY: 'AIzaSyCFk9z-RNODsVuL-QkE4Os5u5PQSJPge8A',
+  GOOGLE_MAPS_API_KEY: '',
 
   // ── Firebase Configuration ───────────────────────────────────────
-  FIREBASE_API_KEY: 'AIzaSyABYMmtPRziDnM2KXuPZ9xTXcHjdOHa5dg',
+  FIREBASE_API_KEY: '',
   FIREBASE_AUTH_DOMAIN: 'medilink-488c3.firebaseapp.com',
   FIREBASE_PROJECT_ID: 'medilink-488c3',
   FIREBASE_STORAGE_BUCKET: 'medilink-488c3.firebasestorage.app',
