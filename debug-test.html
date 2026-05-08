@@ -32,7 +32,7 @@
 <div id="backendResult" style="margin-top:12px;padding:12px;border:1px solid #ddd;border-radius:8px;display:none"></div>
 
 <script>
-const GEMINI_API_KEY = 'AIzaSyBhJAWtw1UIPB0fE9tgATQdb73wetKldSA';
+const GEMINI_API_KEY = '';
 const GEMINI_MODEL = 'gemini-2.5-flash';
 const GEMINI_URL = `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent?key=${GEMINI_API_KEY}`;
 
@@ -47,6 +47,12 @@ function show(id, html, color) {
 document.getElementById('testSymptom').onclick = async function() {
   this.textContent = '⏳ Calling Gemini API...';
   this.disabled = true;
+  if (!GEMINI_API_KEY) {
+    show('symptomResult', '<b style="color:red">❌ Missing GEMINI_API_KEY.</b> Set it in debug-test.html before running.', 'red');
+    this.textContent = '🧪 Test Symptom Checker';
+    this.disabled = false;
+    return;
+  }
   try {
     const body = {
       contents: [{ role: 'user', parts: [{ text: `You are a medical triage assistant for rural India. Respond ONLY with this JSON (no markdown, no backticks, no extra text): {"urgency":"LOW","urgencyColor":"green","urgencyReason":"reason","possibleConditions":["c1","c2"],"recommendation":"rec","recommendationHindi":"hindi","homeRemedies":["r1"],"warningSigns":["w1"],"shouldSeeDoctor":false,"timeframe":"when","disclaimer":"AI only"}\n\nPatient reports: Fever, Headache. Duration: 1-2 days. Severity: Moderate.` }] }],
@@ -74,6 +80,12 @@ document.getElementById('testSymptom').onclick = async function() {
 document.getElementById('testAsliDawa').onclick = async function() {
   this.textContent = '⏳ Calling Gemini API...';
   this.disabled = true;
+  if (!GEMINI_API_KEY) {
+    show('asliDawaResult', '<b style="color:red">❌ Missing GEMINI_API_KEY.</b> Set it in debug-test.html before running.', 'red');
+    this.textContent = '🧪 Test AsliDawa API';
+    this.disabled = false;
+    return;
+  }
   try {
     const body = {
       contents: [{ role: 'user', parts: [{ text: `You are a pharmaceutical expert. Barcode: 8904131401010 = Authentic Paracetamol by Cipla. Respond ONLY with JSON: {"verdict":"AUTHENTIC","confidence":85,"medicineName":"Paracetamol","genericName":"Acetaminophen","manufacturer":"Cipla","batchFormat":"Batch A123","regNo":"CDSCO-123","positiveIndicators":["clear print"],"suspiciousIndicators":[],"recommendation":"Safe to consume","analysisNote":"note"}` }] }],

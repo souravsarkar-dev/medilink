@@ -1,4 +1,7 @@
-const key = "AIzaSyBhJAWtw1UIPB0fE9tgATQdb73wetKldSA";
+const key = process.env.GEMINI_API_KEY || "";
+if (!key) {
+  throw new Error("Missing GEMINI_API_KEY. Set it before running this script.");
+}
 const model = "gemini-1.5-flash";
 const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${key}`;
 
